@@ -1,2 +1,5 @@
 # Ignore python environment directories
-env/ 
+env/
+.env/
+venv/
+.venv/
