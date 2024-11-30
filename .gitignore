@@ -3,3 +3,6 @@ env/
 .env/
 venv/
 .venv/
+
+# Ignore DS files from MacOS Finder
+.DS_Store
