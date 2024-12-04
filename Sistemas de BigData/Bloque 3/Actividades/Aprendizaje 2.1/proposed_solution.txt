@@ -1,0 +1,1307 @@
+// Creación de los datos del grafo
+
+CREATE
+	(alcudia:			Ciutat {nom: "Alcúdia", poblacio: 20717}),
+	(andratx:			Ciutat {nom: "Andratx", poblacio: 11735}),
+	(calvia:			Ciutat {nom: "Calvià", poblacio: 52458}),
+	(campos:			Ciutat {nom: "Campos", poblacio: 11618}),
+	(capdepera:			Ciutat {nom: "Capdepera", poblacio: 12081}),
+	(felanitx:			Ciutat {nom: "Felanitx", poblacio: 18357}),
+	(inca:				Ciutat {nom: "Inca", poblacio: 34093}),
+	(llucmajor:			Ciutat {nom: "Llucmajor", poblacio: 38722}),
+	(manacor:			Ciutat {nom: "Manacor", poblacio: 45352}),
+	(marratxi:			Ciutat {nom: "Marratxí", poblacio: 38902}),
+	(palma:				Ciutat {nom: "Palma", poblacio: 415940}),
+	(pollenca:			Ciutat {nom: "Pollença", poblacio: 17126}),
+	(sapobla:			Ciutat {nom: "Sa Pobla", poblacio: 14005}),
+	(santamargalida:	Ciutat {nom: "Santa Margalida", poblacio: 12776}),
+	(santanyi:			Ciutat {nom: "Santanyí", poblacio: 12321}),
+	(soller:			Ciutat {nom: "Sóller", poblacio: 13454}),
+	(sonservera:		Ciutat {nom: "Son Servera", poblacio: 11752}),
+	
+	(algaida:			Poble {nom: "Algaida", poblacio: 6075}),
+	(ariany:			Poble {nom: "Ariany", poblacio: 912}),
+	(arta:				Poble {nom: "Artà", poblacio: 8062}),
+	(banyalbufar:		Poble {nom: "Banyalbufar", poblacio: 566}),
+	(binissalem:		Poble {nom: "Binissalem", poblacio: 9027}),
+	(buger:				Poble {nom: "Búger", poblacio: 1111}),
+	(bunyola:			Poble {nom: "Bunyola", poblacio: 7121}),
+	(campanet:			Poble {nom: "Campanet", poblacio: 2719}),
+	(consell:			Poble {nom: "Consell", poblacio: 4230}),
+	(costitx:			Poble {nom: "Costitx", poblacio: 1446}),
+	(deia:				Poble {nom: "Deià", poblacio: 674}),
+	(escorca:			Poble {nom: "Escorca", poblacio: 187}),
+	(esporles:			Poble {nom: "Esporles", poblacio: 5182}),
+	(estellencs:		Poble {nom: "Estellencs", poblacio: 336}),
+	(fornalutx:			Poble {nom: "Fornalutx", poblacio: 710}),
+	(lloret:			Poble {nom: "Lloret de Vistalegre", poblacio: 1514}),
+	(lloseta:			Poble {nom: "Lloseta", poblacio: 6312}),
+	(llubi:				Poble {nom: "Llubí", poblacio: 2392}),
+	(mancor:			Poble {nom: "Mancor de la Vall", poblacio: 1596}),
+	(mariadelasalut:	Poble {nom: "Maria de la Salut", poblacio: 2273}),
+	(montuiri:			Poble {nom: "Montuïri", poblacio: 3119}),
+	(muro:				Poble {nom: "Muro", poblacio: 7667}),
+	(petra:				Poble {nom: "Petra", poblacio: 3067}),
+	(porreres:			Poble {nom: "Porreres", poblacio: 5645}),
+	(puigpunyent:		Poble {nom: "Puigpunyent", poblacio: 2075}),
+	(sencelles:			Poble {nom: "Sencelles", poblacio: 3659}),
+	(santjoan:			Poble {nom: "Sant Joan", poblacio: 2179}),
+	(santllorenc:		Poble {nom: "Sant Llorenç des Cardassar", poblacio: 9035}),
+	(santaeugenia:		Poble {nom: "Santa Eugènia", poblacio: 1771}),
+	(santamaria:		Poble {nom: "Santa Maria del Camí", poblacio: 7483}),
+	(selva:				Poble {nom: "Selva", poblacio: 4243}),
+	(sessalines:		Poble {nom: "Ses Salines", poblacio: 5039}),
+	(sineu:				Poble {nom: "Sineu", poblacio: 4232}),
+	(valldemossa:		Poble {nom: "Valldemossa", poblacio: 2085}),
+	(vilafranca:		Poble {nom: "Vilafranca de Bonany", poblacio: 3600}),
+
+
+	(palma)-[:CARRETERA {nom: "MA-1", distancia: 32, temps: 19}]->(andratx),
+
+	(andratx)-[:CARRETERA {nom: "MA-1", distancia: 32, temps: 19}]->(palma),
+
+
+	(palma)-[:CARRETERA {nom: "MA-11", distancia: 21, temps: 26}]->(bunyola),
+	(bunyola)-[:CARRETERA {nom: "MA-11", distancia: 10, temps: 15}]->(soller),
+	
+	(soller)-[:CARRETERA {nom: "MA-11", distancia: 10, temps: 15}]->(bunyola),
+	(bunyola)-[:CARRETERA {nom: "MA-11", distancia: 21, temps: 26}]->(palma),
+
+
+	(palma)-[:CARRETERA {nom: "MA-13", distancia: 15, temps: 17}]->(marratxi),
+	(marratxi)-[:CARRETERA {nom: "MA-13", distancia: 7, temps: 7}]->(santamaria),
+	(santamaria)-[:CARRETERA {nom: "MA-13", distancia: 4, temps: 8}]->(consell),
+	(consell)-[:CARRETERA {nom: "MA-13", distancia: 4, temps: 8}]->(binissalem),
+	(binissalem)-[:CARRETERA {nom: "MA-13", distancia: 3, temps: 2}]->(lloseta),
+	(lloseta)-[:CARRETERA {nom: "MA-13", distancia: 5, temps: 3}]->(inca),
+	(inca)-[:CARRETERA {nom: "MA-13", distancia: 29, temps: 24}]->(alcudia),
+
+	(alcudia)-[:CARRETERA {nom: "MA-13", distancia: 29, temps: 24}]->(inca),
+	(inca)-[:CARRETERA {nom: "MA-13", distancia: 5, temps: 3}]->(lloseta),
+	(lloseta)-[:CARRETERA {nom: "MA-13", distancia: 3, temps: 2}]->(binissalem),
+	(binissalem)-[:CARRETERA {nom: "MA-13", distancia: 4, temps: 8}]->(consell),
+	(consell)-[:CARRETERA {nom: "MA-13", distancia: 4, temps: 8}]->(santamaria),
+	(santamaria)-[:CARRETERA {nom: "MA-13", distancia: 7, temps: 7}]->(marratxi),
+	(marratxi)-[:CARRETERA {nom: "MA-13", distancia: 15, temps: 17}]->(palma),
+
+
+	(palma)-[:CARRETERA {nom: "MA-15", distancia: 29, temps: 17}]->(algaida),
+	(algaida)-[:CARRETERA {nom: "MA-15", distancia: 24, temps: 14}]->(montuiri),
+	(montuiri)-[:CARRETERA {nom: "MA-15", distancia: 13, temps: 8}]->(vilafranca),
+	(vilafranca)-[:CARRETERA {nom: "MA-15", distancia: 12, temps: 7}]->(manacor),
+	(manacor)-[:CARRETERA {nom: "MA-15", distancia: 14, temps: 8}]->(santllorenc),
+	(santllorenc)-[:CARRETERA {nom: "MA-15", distancia: 7, temps: 4}]->(arta),
+	(arta)-[:CARRETERA {nom: "MA-15", distancia: 11, temps: 7}]->(capdepera),
+
+	(capdepera)-[:CARRETERA {nom: "MA-15", distancia: 11, temps: 7}]->(arta),
+	(arta)-[:CARRETERA {nom: "MA-15", distancia: 7, temps: 4}]->(santllorenc),
+	(santllorenc)-[:CARRETERA {nom: "MA-15", distancia: 14, temps: 8}]->(manacor),
+	(manacor)-[:CARRETERA {nom: "MA-15", distancia: 12, temps: 7}]->(vilafranca),
+	(vilafranca)-[:CARRETERA {nom: "MA-15", distancia: 13, temps: 8}]->(montuiri),
+	(montuiri)-[:CARRETERA {nom: "MA-15", distancia: 24, temps: 14}]->(algaida),
+	(algaida)-[:CARRETERA {nom: "MA-15", distancia: 29, temps: 17}]->(palma),
+
+
+	(palma)-[:CARRETERA {nom: "MA-19", distancia: 31, temps: 29}]->(llucmajor),
+	(llucmajor)-[:CARRETERA {nom: "MA-19", distancia: 14, temps: 15}]->(campos),
+	(campos)-[:CARRETERA {nom: "MA-19", distancia: 15, temps: 15}]->(santanyi),
+
+	(santanyi)-[:CARRETERA {nom: "MA-19", distancia: 15, temps: 15}]->(campos),
+	(campos)-[:CARRETERA {nom: "MA-19", distancia: 14, temps: 15}]->(llucmajor),
+	(llucmajor)-[:CARRETERA {nom: "MA-19", distancia: 31, temps: 29}]->(palma),
+
+
+	(inca)-[:CARRETERA {distancia: 13, temps: 15}]->(campanet),
+	(inca)-[:CARRETERA {distancia: 13, temps: 13}]->(buger),
+
+	(campanet)-[:CARRETERA {distancia: 13, temps: 15}]->(inca),
+	(buger)-[:CARRETERA {distancia: 13, temps: 13}]->(inca),
+
+
+	(campanet)-[:PISTA {distancia: 5, temps: 10}]->(buger),
+	(buger)-[:PISTA {distancia: 5, temps: 10}]->(campanet),
+
+
+	(inca)-[:PISTA {distancia: 14, temps: 17}]->(sineu),
+	(sineu)-[:PISTA {distancia: 14, temps: 17}]->(inca),
+
+	(inca)-[:PISTA {distancia: 13, temps: 10}]->(llubi),
+	(llubi)-[:PISTA {distancia: 9, temps: 12}]->(sineu),
+
+	(sineu)-[:PISTA {distancia: 9, temps: 12}]->(llubi),
+	(llubi)-[:PISTA {distancia: 13, temps: 10}]->(inca),
+
+
+	(sineu)-[:PISTA {distancia: 11, temps: 14}]->(ariany),
+	(ariany)-[:PISTA {distancia: 6, temps: 10}]->(petra),
+
+	(sineu)-[:PISTA {distancia: 11, temps: 17}]->(petra),
+	(petra)-[:PISTA {distancia: 11, temps: 17}]->(sineu),
+
+	(sineu)-[:PISTA {distancia: 7, temps: 8}]->(santjoan),
+	(santjoan)-[:PISTA {distancia: 8, temps: 11}]->(petra),
+
+	(petra)-[:PISTA {distancia: 8, temps: 11}]->(santjoan),
+	(santjoan)-[:PISTA {distancia: 7, temps: 8}]->(sineu),
+
+
+	(andratx)-[:CARRETERA {distancia: 17, temps: 19}]->(calvia),
+	(calvia)-[:PISTA {distancia: 18, temps: 27}]->(puigpunyent),
+	(puigpunyent)-[:PISTA {distancia: 17, temps: 24}]->(esporles),
+	(esporles)-[:PISTA {distancia: 14, temps: 17}]->(valldemossa),
+	(soller)-[:PISTA {distancia: 29, temps: 40}]->(escorca),
+	(escorca)-[:PISTA {distancia: 25, temps: 33}]->(pollenca),
+
+	(sonservera)-[:PISTA {distancia: 9, temps: 12}]->(santllorenc),
+	(capdepera)-[:CARRETERA {distancia: 13, temps: 14}]->(sonservera),
+	(sapobla)-[:CARRETERA {distancia: 6, temps: 11}]->(muro),
+	(muro)-[:CARRETERA {distancia: 7, temps: 10}]->(santamargalida),
+	(santamargalida)-[:PISTA {distancia: 10, temps: 14}]->(mariadelasalut),
+	(mariadelasalut)-[:PISTA {distancia: 7, temps: 11}]->(sineu),
+
+
+	(esporles)-[:PISTA {distancia: 11, temps: 17}]->(banyalbufar),
+	(banyalbufar)-[:PISTA {distancia: 7, temps: 13}]->(estellencs),
+	(estellencs)-[:CARRETERA {distancia: 19, temps: 29}]->(andratx),
+	(valldemossa)-[:PISTA {distancia: 11, temps: 16}]->(deia),
+	(deia)-[:PISTA {distancia: 11, temps: 22}]->(soller),
+
+
+	(soller)-[:CARRETERA {distancia: 8, temps: 15}]->(fornalutx),
+	(fornalutx)-[:PISTA {distancia: 24, temps: 33}]->(escorca),
+
+	(inca)-[:CARRETERA {distancia: 6, temps: 11}]->(selva),
+	(selva)-[:PISTA {distancia: 8, temps: 14}]->(campanet),
+
+	(santamaria)-[:CARRETERA {distancia: 7, temps: 9}]->(santaeugenia),
+	(santaeugenia)-[:PISTA {distancia: 7, temps: 11}]->(sencelles),
+	(sencelles)-[:PISTA {distancia: 6, temps: 10}]->(costitx),
+	(costitx)-[:CARRETERA {distancia: 8, temps: 11}]->(sineu),
+
+
+	(felanitx)-[:CARRETERA {distancia: 15, temps: 19}]->(vilafranca),
+	(manacor)-[:CARRETERA {distancia: 14, temps: 18}]->(felanitx),
+	(campos)-[:PISTA {distancia: 10, temps: 11}]->(porreres),
+
+
+	(pollenca)-[:CARRETERA {distancia: 11, temps: 20}]->(alcudia),
+
+
+	(campos)-[:CARRETERA {distancia: 13, temps: 15}]->(sessalines),
+	(sessalines)-[:PISTA {distancia: 8, temps: 12}]->(santanyi),
+
+	(inca)-[:CARRETERA {distancia: 6, temps: 9}]->(mancor),
+	(mancor)-[:PISTA {distancia: 5, temps: 9}]->(selva),
+
+	(sineu)-[:PISTA {distancia: 5, temps: 7}]->(lloret),
+	(lloret)-[:PISTA {distancia: 5, temps: 7}]->(sineu),
+
+
+	(porreres)-[:PISTA {distancia: 8, temps: 11}]->(montuiri),
+	(inca)-[:CARRETERA {distancia: 15, temps: 17}]->(sapobla)
+
+
+// Resultado de la ejecución 
+//
+// Added 52 labels, created 52 nodes, set 338 properties, created 97 relationships, completed after 25 ms.
+
+
+// Comprobar el grafo
+// Revisamos que todos los nodos tengan al menos dos relaciones
+
+MATCH (o)-[r]-(d)
+WITH d, COUNT(DISTINCT r) as sum
+WHERE sum <= 1
+RETURN d.nom, sum
+ORDER BY sum ASC
+
+// Resultado de la ejecución 
+//
+
+(no changes, no records)
+
+
+1. Recupera el nom de totes les ciutats.
+
+MATCH (n:Ciutat) RETURN n.nom;
+
+
+// Resultado de la ejecución
+//
+
+╒═════════════════╕
+│n.nom            │
+╞═════════════════╡
+│"Manacor"        │
+├─────────────────┤
+│"Marratxí"       │
+├─────────────────┤
+│"Palma"          │
+├─────────────────┤
+│"Pollença"       │
+├─────────────────┤
+│"Sa Pobla"       │
+├─────────────────┤
+│"Santa Margalida"│
+├─────────────────┤
+│"Santanyí"       │
+├─────────────────┤
+│"Sóller"         │
+├─────────────────┤
+│"Son Servera"    │
+├─────────────────┤
+│"Llucmajor"      │
+├─────────────────┤
+│"Alcúdia"        │
+├─────────────────┤
+│"Andratx"        │
+├─────────────────┤
+│"Calvià"         │
+├─────────────────┤
+│"Campos"         │
+├─────────────────┤
+│"Capdepera"      │
+├─────────────────┤
+│"Felanitx"       │
+├─────────────────┤
+│"Inca"           │
+└─────────────────┘
+
+
+2. Recupera tots els pobles als quals s'hi pot arribar per carretera (sense usar les pistes), a través d'una única aresta.
+
+MATCH (n)-[:CARRETERA]->(p:Poble) 
+RETURN DISTINCT p
+
+
+// Resultado de la ejecución
+//
+
+╒═══════════════════════════════════════════════════════════╕
+│p                                                          │
+╞═══════════════════════════════════════════════════════════╡
+│(:Poble {poblacio: 6075,nom: "Algaida"})                   │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 8062,nom: "Artà"})                      │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 9027,nom: "Binissalem"})                │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 1111,nom: "Búger"})                     │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 7121,nom: "Bunyola"})                   │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 2719,nom: "Campanet"})                  │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 4230,nom: "Consell"})                   │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 710,nom: "Fornalutx"})                  │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 6312,nom: "Lloseta"})                   │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 1596,nom: "Mancor de la Vall"})         │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 3119,nom: "Montuïri"})                  │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 7667,nom: "Muro"})                      │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 9035,nom: "Sant Llorenç des Cardassar"})│
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 1771,nom: "Santa Eugènia"})             │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 7483,nom: "Santa Maria del Camí"})      │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 4243,nom: "Selva"})                     │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 5039,nom: "Ses Salines"})               │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 4232,nom: "Sineu"})                     │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 3600,nom: "Vilafranca de Bonany"})      │
+└───────────────────────────────────────────────────────────┘
+
+
+3. Tria el nom d'una ciutat i recupera tots els pobles i ciutats als quals podem arribar per carretera (a través d'una única aresta) des d'ella.
+
+MATCH (origen:Ciutat {nom:'Inca'})-[r:CARRETERA]->(destino)
+RETURN destino
+
+// Resultado de la ejecución
+//
+
+╒══════════════════════════════════════════════════╕
+│destino                                           │
+╞══════════════════════════════════════════════════╡
+│(:Ciutat {poblacio: 14005,nom: "Sa Pobla"})       │
+├──────────────────────────────────────────────────┤
+│(:Poble {poblacio: 1596,nom: "Mancor de la Vall"})│
+├──────────────────────────────────────────────────┤
+│(:Poble {poblacio: 4243,nom: "Selva"})            │
+├──────────────────────────────────────────────────┤
+│(:Poble {poblacio: 1111,nom: "Búger"})            │
+├──────────────────────────────────────────────────┤
+│(:Poble {poblacio: 2719,nom: "Campanet"})         │
+├──────────────────────────────────────────────────┤
+│(:Poble {poblacio: 6312,nom: "Lloseta"})          │
+├──────────────────────────────────────────────────┤
+│(:Ciutat {poblacio: 20717,nom: "Alcúdia"})        │
+└──────────────────────────────────────────────────┘
+
+
+4. Tria el nom d'un poble i recupera tots els pobles i ciutats des dels quals podem arribar (a través d'una única aresta) fins a ell. Indica també si s'hi arriba per carretera o per pista.
+
+MATCH (destino:Poble {nom:'Sineu'})<-[r]-(origen)
+RETURN origen, type(r) as Tipo
+
+
+// Resultado de la ejecución
+//
+
+╒═════════════════════════════════════════════════════╤═══════════╕
+│origen                                               │Tipo       │
+╞═════════════════════════════════════════════════════╪═══════════╡
+│(:Poble {poblacio: 2273,nom: "Maria de la Salut"})   │"PISTA"    │
+├─────────────────────────────────────────────────────┼───────────┤
+│(:Poble {poblacio: 2179,nom: "Sant Joan"})           │"PISTA"    │
+├─────────────────────────────────────────────────────┼───────────┤
+│(:Poble {poblacio: 3067,nom: "Petra"})               │"PISTA"    │
+├─────────────────────────────────────────────────────┼───────────┤
+│(:Ciutat {poblacio: 34093,nom: "Inca"})              │"PISTA"    │
+├─────────────────────────────────────────────────────┼───────────┤
+│(:Poble {poblacio: 2392,nom: "Llubí"})               │"PISTA"    │
+├─────────────────────────────────────────────────────┼───────────┤
+│(:Poble {poblacio: 1514,nom: "Lloret de Vistalegre"})│"PISTA"    │
+├─────────────────────────────────────────────────────┼───────────┤
+│(:Poble {poblacio: 1446,nom: "Costitx"})             │"CARRETERA"│
+└─────────────────────────────────────────────────────┴───────────┘
+
+
+5. Afegeix un nou node poble, amb les seves dades, amb una aresta d'entrada i una altra de sortida.
+
+// En primer lugar creamos el nodo
+
+CREATE (casameva: Poble {nom: "Casa Meva", poblacio: 2});
+
+// Resultado de la ejecución
+//
+
+Added 1 label, created 1 node, set 2 properties, completed after 87 ms.
+
+
+// A continuación creamos las relaciones
+
+MATCH 
+	(palma: Ciutat {nom: "Palma"}), 
+	(andratx: Ciutat {nom: "Andratx"}), 
+	(casameva: Poble {nom: "Casa Meva"})
+CREATE 
+	(palma)-[:CARRETERA {distancia: 5, temps: 10}]->(casameva),
+	(casameva)-[:PISTA {distancia: 25, temps: 30}]->(andratx)
+
+// Resultado de la ejecución
+//
+
+Set 4 properties, created 2 relationships, completed after 15 ms.
+
+
+6. Modifica la població del node anterior.
+
+MATCH (p:Poble {nom: 'Casa Meva'})
+SET p.poblacio = 3
+
+// Resultado de la ejecución
+//
+
+Set 1 property, completed after 3 ms.
+
+
+7. Esborra les dues arestes del nou node.
+
+MATCH (p:Poble {nom: 'Casa Meva'})-[r]-(n)
+DELETE r
+
+// Resultado de la ejecución
+//
+
+Deleted 2 relationships, completed after 6 ms.
+
+
+8. Esborra el nou node.
+
+MATCH (p:Poble {nom: 'Casa Meva'})
+DELETE p
+
+// Resultado de la ejecución
+//
+
+Deleted 1 node, completed after 1 ms.
+
+
+9. Recupera tots els pobles de menys de 5.000 habitants.
+
+MATCH (p:Poble)
+WHERE p.poblacio < 5000
+RETURN p
+
+// Resultado de la ejecución
+//
+
+╒═════════════════════════════════════════════════════╕
+│p                                                    │
+╞═════════════════════════════════════════════════════╡
+│(:Poble {poblacio: 912,nom: "Ariany"})               │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 566,nom: "Banyalbufar"})          │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 1111,nom: "Búger"})               │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 2719,nom: "Campanet"})            │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 4230,nom: "Consell"})             │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 1446,nom: "Costitx"})             │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 674,nom: "Deià"})                 │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 187,nom: "Escorca"})              │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 336,nom: "Estellencs"})           │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 710,nom: "Fornalutx"})            │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 1514,nom: "Lloret de Vistalegre"})│
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 2392,nom: "Llubí"})               │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 1596,nom: "Mancor de la Vall"})   │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 2273,nom: "Maria de la Salut"})   │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 3119,nom: "Montuïri"})            │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 3067,nom: "Petra"})               │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 2075,nom: "Puigpunyent"})         │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 3659,nom: "Sencelles"})           │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 2179,nom: "Sant Joan"})           │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 1771,nom: "Santa Eugènia"})       │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 4243,nom: "Selva"})               │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 4232,nom: "Sineu"})               │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 2085,nom: "Valldemossa"})         │
+├─────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 3600,nom: "Vilafranca de Bonany"})│
+└─────────────────────────────────────────────────────┘
+
+
+10. Recupera tots els pobles des dels quals es pot arribar per carretera (a través d'una única aresta) a una ciutat de més de 20.000 habitants.
+
+MATCH (c:Ciutat) WHERE c.poblacio > 20000	// Primero obtenemos las ciudades con mas de 20000 habitantes
+MATCH (c)<-[r:CARRETERA]-(p:Poble)			// Luego obtenemos los pueblos desde los que podemos llegar por carretera a una de las ciudades obtenidas
+RETURN p
+
+
+// Resultado de la ejecución
+//
+
+╒═══════════════════════════════════════════════════════════╕
+│p                                                          │
+╞═══════════════════════════════════════════════════════════╡
+│(:Poble {poblacio: 9035,nom: "Sant Llorenç des Cardassar"})│
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 3600,nom: "Vilafranca de Bonany"})      │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 7483,nom: "Santa Maria del Camí"})      │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 6075,nom: "Algaida"})                   │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 7121,nom: "Bunyola"})                   │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 1111,nom: "Búger"})                     │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 2719,nom: "Campanet"})                  │
+├───────────────────────────────────────────────────────────┤
+│(:Poble {poblacio: 6312,nom: "Lloseta"})                   │
+└───────────────────────────────────────────────────────────┘
+
+
+11. Recupera el nom i població de totes les ciutats, ordenades per població, de major a menor.
+
+MATCH (c:Ciutat)
+RETURN c.nom, c.poblacio
+ORDER BY c.poblacio DESC
+
+// Resultado de la ejecución
+//
+
+╒═════════════════╤══════════╕
+│c.nom            │c.poblacio│
+╞═════════════════╪══════════╡
+│"Palma"          │415940    │
+├─────────────────┼──────────┤
+│"Calvià"         │52458     │
+├─────────────────┼──────────┤
+│"Manacor"        │45352     │
+├─────────────────┼──────────┤
+│"Marratxí"       │38902     │
+├─────────────────┼──────────┤
+│"Llucmajor"      │38722     │
+├─────────────────┼──────────┤
+│"Inca"           │34093     │
+├─────────────────┼──────────┤
+│"Alcúdia"        │20717     │
+├─────────────────┼──────────┤
+│"Felanitx"       │18357     │
+├─────────────────┼──────────┤
+│"Pollença"       │17126     │
+├─────────────────┼──────────┤
+│"Sa Pobla"       │14005     │
+├─────────────────┼──────────┤
+│"Sóller"         │13454     │
+├─────────────────┼──────────┤
+│"Santa Margalida"│12776     │
+├─────────────────┼──────────┤
+│"Santanyí"       │12321     │
+├─────────────────┼──────────┤
+│"Capdepera"      │12081     │
+├─────────────────┼──────────┤
+│"Son Servera"    │11752     │
+├─────────────────┼──────────┤
+│"Andratx"        │11735     │
+├─────────────────┼──────────┤
+│"Campos"         │11618     │
+└─────────────────┴──────────┘
+
+
+12. Tria el nom d'una ciutat i fes un recorregut en amplitud des d'ella.
+
+// Projectamos el grafo
+
+CALL gds.graph.project(
+    'grafo',
+    ['Poble',  'Ciutat'],
+    {PISTA: {properties: ['distancia', 'temps']}, CARRETERA: {properties: ['distancia', 'temps']}}
+)
+
+
+// Resultado de la ejecución
+//
+
+╒══════════════════════════════════════════════════════════════════════╤══════════════════════════════════════════════════════════════════════╤═════════╤═════════╤═════════════════╤═════════════╕
+│nodeProjection                                                        │relationshipProjection                                                │graphName│nodeCount│relationshipCount│projectMillis│
+╞══════════════════════════════════════════════════════════════════════╪══════════════════════════════════════════════════════════════════════╪═════════╪═════════╪═════════════════╪═════════════╡
+│{Poble: {label: "Poble", properties: {}}, Ciutat: {label: "Ciutat", pr│{PISTA: {aggregation: "DEFAULT", orientation: "NATURAL", indexInverse:│"grafo"  │52       │97               │588          │
+│operties: {}}}                                                        │ false, properties: {distancia: {aggregation: "DEFAULT", property: "di│         │         │                 │             │
+│                                                                      │stancia", defaultValue: null}, temps: {aggregation: "DEFAULT", propert│         │         │                 │             │
+│                                                                      │y: "temps", defaultValue: null}}, type: "PISTA"}, CARRETERA: {aggregat│         │         │                 │             │
+│                                                                      │ion: "DEFAULT", orientation: "NATURAL", indexInverse: false, propertie│         │         │                 │             │
+│                                                                      │s: {distancia: {aggregation: "DEFAULT", property: "distancia", default│         │         │                 │             │
+│                                                                      │Value: null}, temps: {aggregation: "DEFAULT", property: "temps", defau│         │         │                 │             │
+│                                                                      │ltValue: null}}, type: "CARRETERA"}}                                  │         │         │                 │             │
+└──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴─────────┴─────────┴─────────────────┴─────────────┘
+
+
+// Ejecutamos el algoritmo BFS sobre el nodo Ciutat Palma
+
+MATCH (palma: Ciutat {nom: "Palma"})
+CALL gds.bfs.stream('grafo', {sourceNode: palma})
+YIELD path
+RETURN path
+
+// Resultado de la ejecución
+//
+
+╒══════════════════════════════════════════════════════════════════════╕
+│path                                                                  │
+╞══════════════════════════════════════════════════════════════════════╡
+│(:Ciutat {poblacio: 415940,nom: "Palma"})-[:NEXT]->(:Ciutat {poblacio:│
+│ 38902,nom: "Marratxí"})-[:NEXT]->(:Poble {poblacio: 6075,nom: "Algaid│
+│a"})-[:NEXT]->(:Poble {poblacio: 7121,nom: "Bunyola"})-[:NEXT]->(:Ciut│
+│at {poblacio: 38722,nom: "Llucmajor"})-[:NEXT]->(:Ciutat {poblacio: 11│
+│735,nom: "Andratx"})-[:NEXT]->(:Poble {poblacio: 7483,nom: "Santa Mari│
+│a del Camí"})-[:NEXT]->(:Poble {poblacio: 3119,nom: "Montuïri"})-[:NEX│
+│T]->(:Ciutat {poblacio: 13454,nom: "Sóller"})-[:NEXT]->(:Ciutat {pobla│
+│cio: 11618,nom: "Campos"})-[:NEXT]->(:Ciutat {poblacio: 52458,nom: "Ca│
+│lvià"})-[:NEXT]->(:Poble {poblacio: 4230,nom: "Consell"})-[:NEXT]->(:P│
+│oble {poblacio: 1771,nom: "Santa Eugènia"})-[:NEXT]->(:Poble {poblacio│
+│: 3600,nom: "Vilafranca de Bonany"})-[:NEXT]->(:Poble {poblacio: 710,n│
+│om: "Fornalutx"})-[:NEXT]->(:Poble {poblacio: 187,nom: "Escorca"})-[:N│
+│EXT]->(:Ciutat {poblacio: 12321,nom: "Santanyí"})-[:NEXT]->(:Poble {po│
+│blacio: 5039,nom: "Ses Salines"})-[:NEXT]->(:Poble {poblacio: 5645,nom│
+│: "Porreres"})-[:NEXT]->(:Poble {poblacio: 2075,nom: "Puigpunyent"})-[│
+│:NEXT]->(:Poble {poblacio: 9027,nom: "Binissalem"})-[:NEXT]->(:Poble {│
+│poblacio: 3659,nom: "Sencelles"})-[:NEXT]->(:Ciutat {poblacio: 45352,n│
+│om: "Manacor"})-[:NEXT]->(:Ciutat {poblacio: 17126,nom: "Pollença"})-[│
+│:NEXT]->(:Poble {poblacio: 5182,nom: "Esporles"})-[:NEXT]->(:Poble {po│
+│blacio: 6312,nom: "Lloseta"})-[:NEXT]->(:Poble {poblacio: 1446,nom: "C│
+│ostitx"})-[:NEXT]->(:Poble {poblacio: 9035,nom: "Sant Llorenç des Card│
+│assar"})-[:NEXT]->(:Ciutat {poblacio: 18357,nom: "Felanitx"})-[:NEXT]-│
+│>(:Ciutat {poblacio: 20717,nom: "Alcúdia"})-[:NEXT]->(:Poble {poblacio│
+│: 566,nom: "Banyalbufar"})-[:NEXT]->(:Poble {poblacio: 2085,nom: "Vall│
+│demossa"})-[:NEXT]->(:Ciutat {poblacio: 34093,nom: "Inca"})-[:NEXT]->(│
+│:Poble {poblacio: 4232,nom: "Sineu"})-[:NEXT]->(:Poble {poblacio: 8062│
+│,nom: "Artà"})-[:NEXT]->(:Poble {poblacio: 336,nom: "Estellencs"})-[:N│
+│EXT]->(:Poble {poblacio: 674,nom: "Deià"})-[:NEXT]->(:Ciutat {poblacio│
+│: 14005,nom: "Sa Pobla"})-[:NEXT]->(:Poble {poblacio: 1111,nom: "Búger│
+│"})-[:NEXT]->(:Poble {poblacio: 2719,nom: "Campanet"})-[:NEXT]->(:Pobl│
+│e {poblacio: 1596,nom: "Mancor de la Vall"})-[:NEXT]->(:Poble {poblaci│
+│o: 4243,nom: "Selva"})-[:NEXT]->(:Poble {poblacio: 2392,nom: "Llubí"})│
+│-[:NEXT]->(:Poble {poblacio: 912,nom: "Ariany"})-[:NEXT]->(:Poble {pob│
+│lacio: 1514,nom: "Lloret de Vistalegre"})-[:NEXT]->(:Poble {poblacio: │
+│3067,nom: "Petra"})-[:NEXT]->(:Poble {poblacio: 2179,nom: "Sant Joan"}│
+│)-[:NEXT]->(:Ciutat {poblacio: 12081,nom: "Capdepera"})-[:NEXT]->(:Pob│
+│le {poblacio: 7667,nom: "Muro"})-[:NEXT]->(:Ciutat {poblacio: 11752,no│
+│m: "Son Servera"})-[:NEXT]->(:Ciutat {poblacio: 12776,nom: "Santa Marg│
+│alida"})-[:NEXT]->(:Poble {poblacio: 2273,nom: "Maria de la Salut"})  │
+└──────────────────────────────────────────────────────────────────────┘
+
+
+
+13. Tria el nom d'un poble i fes un recorregut en profunditat des d'ell.
+
+MATCH (sineu: Poble {nom: "Sineu"})
+CALL gds.dfs.stream('grafo', {sourceNode: sineu})
+YIELD path
+RETURN path
+
+
+// Resultado de la ejecución
+//
+
+╒══════════════════════════════════════════════════════════════════════╕
+│path                                                                  │
+╞══════════════════════════════════════════════════════════════════════╡
+│(:Poble {poblacio: 4232,nom: "Sineu"})-[:NEXT]->(:Ciutat {poblacio: 34│
+│093,nom: "Inca"})-[:NEXT]->(:Ciutat {poblacio: 20717,nom: "Alcúdia"})-│
+│[:NEXT]->(:Poble {poblacio: 4243,nom: "Selva"})-[:NEXT]->(:Poble {pobl│
+│acio: 1596,nom: "Mancor de la Vall"})-[:NEXT]->(:Poble {poblacio: 6312│
+│,nom: "Lloseta"})-[:NEXT]->(:Poble {poblacio: 9027,nom: "Binissalem"})│
+│-[:NEXT]->(:Poble {poblacio: 4230,nom: "Consell"})-[:NEXT]->(:Poble {p│
+│oblacio: 7483,nom: "Santa Maria del Camí"})-[:NEXT]->(:Poble {poblacio│
+│: 1771,nom: "Santa Eugènia"})-[:NEXT]->(:Poble {poblacio: 3659,nom: "S│
+│encelles"})-[:NEXT]->(:Poble {poblacio: 1446,nom: "Costitx"})-[:NEXT]-│
+│>(:Ciutat {poblacio: 38902,nom: "Marratxí"})-[:NEXT]->(:Ciutat {poblac│
+│io: 415940,nom: "Palma"})-[:NEXT]->(:Ciutat {poblacio: 11735,nom: "And│
+│ratx"})-[:NEXT]->(:Ciutat {poblacio: 52458,nom: "Calvià"})-[:NEXT]->(:│
+│Poble {poblacio: 2075,nom: "Puigpunyent"})-[:NEXT]->(:Poble {poblacio:│
+│ 5182,nom: "Esporles"})-[:NEXT]->(:Poble {poblacio: 2085,nom: "Valldem│
+│ossa"})-[:NEXT]->(:Poble {poblacio: 674,nom: "Deià"})-[:NEXT]->(:Ciuta│
+│t {poblacio: 13454,nom: "Sóller"})-[:NEXT]->(:Poble {poblacio: 187,nom│
+│: "Escorca"})-[:NEXT]->(:Ciutat {poblacio: 17126,nom: "Pollença"})-[:N│
+│EXT]->(:Poble {poblacio: 710,nom: "Fornalutx"})-[:NEXT]->(:Poble {pobl│
+│acio: 566,nom: "Banyalbufar"})-[:NEXT]->(:Poble {poblacio: 336,nom: "E│
+│stellencs"})-[:NEXT]->(:Ciutat {poblacio: 38722,nom: "Llucmajor"})-[:N│
+│EXT]->(:Ciutat {poblacio: 11618,nom: "Campos"})-[:NEXT]->(:Poble {pobl│
+│acio: 5645,nom: "Porreres"})-[:NEXT]->(:Poble {poblacio: 3119,nom: "Mo│
+│ntuïri"})-[:NEXT]->(:Poble {poblacio: 3600,nom: "Vilafranca de Bonany"│
+│})-[:NEXT]->(:Ciutat {poblacio: 45352,nom: "Manacor"})-[:NEXT]->(:Ciut│
+│at {poblacio: 18357,nom: "Felanitx"})-[:NEXT]->(:Poble {poblacio: 9035│
+│,nom: "Sant Llorenç des Cardassar"})-[:NEXT]->(:Poble {poblacio: 8062,│
+│nom: "Artà"})-[:NEXT]->(:Ciutat {poblacio: 12081,nom: "Capdepera"})-[:│
+│NEXT]->(:Ciutat {poblacio: 11752,nom: "Son Servera"})-[:NEXT]->(:Poble│
+│ {poblacio: 5039,nom: "Ses Salines"})-[:NEXT]->(:Ciutat {poblacio: 123│
+│21,nom: "Santanyí"})-[:NEXT]->(:Poble {poblacio: 7121,nom: "Bunyola"})│
+│-[:NEXT]->(:Poble {poblacio: 6075,nom: "Algaida"})-[:NEXT]->(:Poble {p│
+│oblacio: 2719,nom: "Campanet"})-[:NEXT]->(:Poble {poblacio: 1111,nom: │
+│"Búger"})-[:NEXT]->(:Ciutat {poblacio: 14005,nom: "Sa Pobla"})-[:NEXT]│
+│->(:Poble {poblacio: 7667,nom: "Muro"})-[:NEXT]->(:Ciutat {poblacio: 1│
+│2776,nom: "Santa Margalida"})-[:NEXT]->(:Poble {poblacio: 2273,nom: "M│
+│aria de la Salut"})-[:NEXT]->(:Poble {poblacio: 2179,nom: "Sant Joan"}│
+│)-[:NEXT]->(:Poble {poblacio: 3067,nom: "Petra"})-[:NEXT]->(:Poble {po│
+│blacio: 2392,nom: "Llubí"})-[:NEXT]->(:Poble {poblacio: 1514,nom: "Llo│
+│ret de Vistalegre"})-[:NEXT]->(:Poble {poblacio: 912,nom: "Ariany"})  │
+└──────────────────────────────────────────────────────────────────────┘
+
+
+14. Tria el nom de dues ciutats que no estiguin directament connectades i recupera el camí més curt en temps entre elles, emprant l'algorisme de Dijkstra.
+
+MATCH (palma: Ciutat {nom: "Palma"}), (manacor: Ciutat {nom: "Manacor"})
+CALL gds.shortestPath.dijkstra.stream('grafo', {
+    sourceNode: palma,
+    targetNode: manacor,
+    relationshipWeightProperty: 'temps'
+})
+YIELD index, sourceNode, targetNode, totalCost, nodeIds, costs, path
+RETURN
+    index,
+    gds.util.asNode(sourceNode).nom AS Origen,
+    gds.util.asNode(targetNode).nom AS Destino,
+    totalCost AS `Minutos Totales`,
+    [nodeId IN nodeIds | gds.util.asNode(nodeId).nom] AS Camino,
+    costs AS `Minutos trayecto`,
+    nodes(path) as path
+ORDER BY index
+
+
+// Resultado de la ejecución
+//
+
+╒═════╤═══════╤═════════╤═══════════════╤═══════════════════════════════════════════════════════════════════╤═════════════════════════════╤══════════════════════════════════════════════════════════════════════╕
+│index│Origen │Destino  │Minutos Totales│Camino                                                             │Minutos trayecto             │path                                                                  │
+╞═════╪═══════╪═════════╪═══════════════╪═══════════════════════════════════════════════════════════════════╪═════════════════════════════╪══════════════════════════════════════════════════════════════════════╡
+│0    │"Palma"│"Manacor"│46.0           │["Palma", "Algaida", "Montuïri", "Vilafranca de Bonany", "Manacor"]│[0.0, 17.0, 31.0, 39.0, 46.0]│[(:Ciutat {poblacio: 415940,nom: "Palma"}), (:Poble {poblacio: 6075,no│
+│     │       │         │               │                                                                   │                             │m: "Algaida"}), (:Poble {poblacio: 3119,nom: "Montuïri"}), (:Poble {po│
+│     │       │         │               │                                                                   │                             │blacio: 3600,nom: "Vilafranca de Bonany"}), (:Ciutat {poblacio: 45352,│
+│     │       │         │               │                                                                   │                             │nom: "Manacor"})]                                                     │
+└─────┴───────┴─────────┴───────────────┴───────────────────────────────────────────────────────────────────┴─────────────────────────────┴──────────────────────────────────────────────────────────────────────┘
+
+
+15. Tria el nom de dos pobles que no estiguin directament connectats i recupera el camí més curt en distància entre ells, emprant l'algorisme de Dijkstra.
+
+MATCH (arta: Poble {nom: "Artà"}), (esporles: Poble {nom: "Esporles"})
+CALL gds.shortestPath.dijkstra.stream('grafo', {
+    sourceNode: arta,
+    targetNode: esporles,
+    relationshipWeightProperty: 'distancia'
+})
+YIELD index, sourceNode, targetNode, totalCost, nodeIds, costs, path
+RETURN
+    index,
+    gds.util.asNode(sourceNode).nom AS Origen,
+    gds.util.asNode(targetNode).nom AS Destino,
+    totalCost AS `Kilometros totales`,
+    [nodeId IN nodeIds | gds.util.asNode(nodeId).nom] AS Camino,
+    costs AS `Kilometros trayecto`,
+    nodes(path) as path
+ORDER BY index
+
+
+// Resultado de la ejecución
+//
+
+╒═════╤══════╤══════════╤══════════════════╤══════════════════════════════════════════════════════════════════════╤════════════════════════════════════════════════════════════════════╤══════════════════════════════════════════════════════════════════════╕
+│index│Origen│Destino   │Kilometros totales│Camino                                                                │Kilometros trayecto                                                 │path                                                                  │
+╞═════╪══════╪══════════╪══════════════════╪══════════════════════════════════════════════════════════════════════╪════════════════════════════════════════════════════════════════════╪══════════════════════════════════════════════════════════════════════╡
+│0    │"Artà"│"Esporles"│183.0             │["Artà", "Sant Llorenç des Cardassar", "Manacor", "Vilafranca de Bonan│[0.0, 7.0, 21.0, 33.0, 46.0, 70.0, 99.0, 131.0, 148.0, 166.0, 183.0]│[(:Poble {poblacio: 8062,nom: "Artà"}), (:Poble {poblacio: 9035,nom: "│
+│     │      │          │                  │y", "Montuïri", "Algaida", "Palma", "Andratx", "Calvià", "Puigpunyent"│                                                                    │Sant Llorenç des Cardassar"}), (:Ciutat {poblacio: 45352,nom: "Manacor│
+│     │      │          │                  │, "Esporles"]                                                         │                                                                    │"}), (:Poble {poblacio: 3600,nom: "Vilafranca de Bonany"}), (:Poble {p│
+│     │      │          │                  │                                                                      │                                                                    │oblacio: 3119,nom: "Montuïri"}), (:Poble {poblacio: 6075,nom: "Algaida│
+│     │      │          │                  │                                                                      │                                                                    │"}), (:Ciutat {poblacio: 415940,nom: "Palma"}), (:Ciutat {poblacio: 11│
+│     │      │          │                  │                                                                      │                                                                    │735,nom: "Andratx"}), (:Ciutat {poblacio: 52458,nom: "Calvià"}), (:Pob│
+│     │      │          │                  │                                                                      │                                                                    │le {poblacio: 2075,nom: "Puigpunyent"}), (:Poble {poblacio: 5182,nom: │
+│     │      │          │                  │                                                                      │                                                                    │"Esporles"})]                                                         │
+└─────┴──────┴──────────┴──────────────────┴──────────────────────────────────────────────────────────────────────┴────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┘
+
+
+16. Determina el grau de sortida (influència) de cada node del graf, ordenats de major a menor.
+
+CALL gds.degree.stream('grafo')
+YIELD nodeId, score
+RETURN gds.util.asNode(nodeId).nom AS Población, score AS Influencia
+ORDER BY Influencia DESC
+
+
+// Resultado de la ejecución
+//
+
+╒════════════════════════════╤══════════╕
+│Población                   │Influencia│
+╞════════════════════════════╪══════════╡
+│"Inca"                      │9.0       │
+├────────────────────────────┼──────────┤
+│"Sineu"                     │6.0       │
+├────────────────────────────┼──────────┤
+│"Palma"                     │5.0       │
+├────────────────────────────┼──────────┤
+│"Campos"                    │4.0       │
+├────────────────────────────┼──────────┤
+│"Manacor"                   │3.0       │
+├────────────────────────────┼──────────┤
+│"Sóller"                    │3.0       │
+├────────────────────────────┼──────────┤
+│"Santa Maria del Camí"      │3.0       │
+├────────────────────────────┼──────────┤
+│"Marratxí"                  │2.0       │
+├────────────────────────────┼──────────┤
+│"Algaida"                   │2.0       │
+├────────────────────────────┼──────────┤
+│"Artà"                      │2.0       │
+├────────────────────────────┼──────────┤
+│"Binissalem"                │2.0       │
+├────────────────────────────┼──────────┤
+│"Búger"                     │2.0       │
+├────────────────────────────┼──────────┤
+│"Bunyola"                   │2.0       │
+├────────────────────────────┼──────────┤
+│"Campanet"                  │2.0       │
+├────────────────────────────┼──────────┤
+│"Consell"                   │2.0       │
+├────────────────────────────┼──────────┤
+│"Esporles"                  │2.0       │
+├────────────────────────────┼──────────┤
+│"Lloseta"                   │2.0       │
+├────────────────────────────┼──────────┤
+│"Llubí"                     │2.0       │
+├────────────────────────────┼──────────┤
+│"Montuïri"                  │2.0       │
+├────────────────────────────┼──────────┤
+│"Petra"                     │2.0       │
+├────────────────────────────┼──────────┤
+│"Sant Joan"                 │2.0       │
+├────────────────────────────┼──────────┤
+│"Sant Llorenç des Cardassar"│2.0       │
+├────────────────────────────┼──────────┤
+│"Vilafranca de Bonany"      │2.0       │
+├────────────────────────────┼──────────┤
+│"Llucmajor"                 │2.0       │
+├────────────────────────────┼──────────┤
+│"Andratx"                   │2.0       │
+├────────────────────────────┼──────────┤
+│"Capdepera"                 │2.0       │
+├────────────────────────────┼──────────┤
+│"Pollença"                  │1.0       │
+├────────────────────────────┼──────────┤
+│"Sa Pobla"                  │1.0       │
+├────────────────────────────┼──────────┤
+│"Santa Margalida"           │1.0       │
+├────────────────────────────┼──────────┤
+│"Santanyí"                  │1.0       │
+├────────────────────────────┼──────────┤
+│"Son Servera"               │1.0       │
+├────────────────────────────┼──────────┤
+│"Ariany"                    │1.0       │
+├────────────────────────────┼──────────┤
+│"Banyalbufar"               │1.0       │
+├────────────────────────────┼──────────┤
+│"Costitx"                   │1.0       │
+├────────────────────────────┼──────────┤
+│"Deià"                      │1.0       │
+├────────────────────────────┼──────────┤
+│"Escorca"                   │1.0       │
+├────────────────────────────┼──────────┤
+│"Estellencs"                │1.0       │
+├────────────────────────────┼──────────┤
+│"Fornalutx"                 │1.0       │
+├────────────────────────────┼──────────┤
+│"Lloret de Vistalegre"      │1.0       │
+├────────────────────────────┼──────────┤
+│"Mancor de la Vall"         │1.0       │
+├────────────────────────────┼──────────┤
+│"Maria de la Salut"         │1.0       │
+├────────────────────────────┼──────────┤
+│"Muro"                      │1.0       │
+├────────────────────────────┼──────────┤
+│"Porreres"                  │1.0       │
+├────────────────────────────┼──────────┤
+│"Puigpunyent"               │1.0       │
+├────────────────────────────┼──────────┤
+│"Sencelles"                 │1.0       │
+├────────────────────────────┼──────────┤
+│"Santa Eugènia"             │1.0       │
+├────────────────────────────┼──────────┤
+│"Selva"                     │1.0       │
+├────────────────────────────┼──────────┤
+│"Ses Salines"               │1.0       │
+├────────────────────────────┼──────────┤
+│"Valldemossa"               │1.0       │
+├────────────────────────────┼──────────┤
+│"Alcúdia"                   │1.0       │
+├────────────────────────────┼──────────┤
+│"Calvià"                    │1.0       │
+├────────────────────────────┼──────────┤
+│"Felanitx"                  │1.0       │
+└────────────────────────────┴──────────┘
+
+
+17. Determina el valor de proximitat (closeness) de cada node del graf, ordenats de major a menor.
+
+CALL gds.closeness.stream('grafo')
+YIELD nodeId, score
+RETURN gds.util.asNode(nodeId).nom AS Población, score AS Proximidad
+ORDER BY Proximidad DESC
+
+
+// Resultado de la ejecución
+//
+
+╒════════════════════════════╤═══════════════════╕
+│Población                   │Proximidad         │
+╞════════════════════════════╪═══════════════════╡
+│"Alcúdia"                   │0.1895910780669145 │
+├────────────────────────────┼───────────────────┤
+│"Inca"                      │0.18545454545454546│
+├────────────────────────────┼───────────────────┤
+│"Marratxí"                  │0.18345323741007194│
+├────────────────────────────┼───────────────────┤
+│"Santa Maria del Camí"      │0.18345323741007194│
+├────────────────────────────┼───────────────────┤
+│"Palma"                     │0.18214285714285713│
+├────────────────────────────┼───────────────────┤
+│"Consell"                   │0.18214285714285713│
+├────────────────────────────┼───────────────────┤
+│"Lloseta"                   │0.18149466192170818│
+├────────────────────────────┼───────────────────┤
+│"Sineu"                     │0.18085106382978725│
+├────────────────────────────┼───────────────────┤
+│"Binissalem"                │0.1795774647887324 │
+├────────────────────────────┼───────────────────┤
+│"Algaida"                   │0.16346153846153846│
+├────────────────────────────┼───────────────────┤
+│"Llubí"                     │0.16293929712460065│
+├────────────────────────────┼───────────────────┤
+│"Campanet"                  │0.159375           │
+├────────────────────────────┼───────────────────┤
+│"Andratx"                   │0.159375           │
+├────────────────────────────┼───────────────────┤
+│"Sa Pobla"                  │0.1588785046728972 │
+├────────────────────────────┼───────────────────┤
+│"Bunyola"                   │0.1588785046728972 │
+├────────────────────────────┼───────────────────┤
+│"Santa Eugènia"             │0.1588785046728972 │
+├────────────────────────────┼───────────────────┤
+│"Selva"                     │0.1588785046728972 │
+├────────────────────────────┼───────────────────┤
+│"Búger"                     │0.15838509316770186│
+├────────────────────────────┼───────────────────┤
+│"Mancor de la Vall"         │0.15789473684210525│
+├────────────────────────────┼───────────────────┤
+│"Llucmajor"                 │0.1574074074074074 │
+├────────────────────────────┼───────────────────┤
+│"Petra"                     │0.15501519756838905│
+├────────────────────────────┼───────────────────┤
+│"Sant Joan"                 │0.15454545454545454│
+├────────────────────────────┼───────────────────┤
+│"Ariany"                    │0.1540785498489426 │
+├────────────────────────────┼───────────────────┤
+│"Lloret de Vistalegre"      │0.1536144578313253 │
+├────────────────────────────┼───────────────────┤
+│"Montuïri"                  │0.15               │
+├────────────────────────────┼───────────────────┤
+│"Sóller"                    │0.14127423822714683│
+├────────────────────────────┼───────────────────┤
+│"Sencelles"                 │0.1401098901098901 │
+├────────────────────────────┼───────────────────┤
+│"Calvià"                    │0.13934426229508196│
+├────────────────────────────┼───────────────────┤
+│"Muro"                      │0.13896457765667575│
+├────────────────────────────┼───────────────────┤
+│"Campos"                    │0.13783783783783785│
+├────────────────────────────┼───────────────────┤
+│"Vilafranca de Bonany"      │0.1349206349206349 │
+├────────────────────────────┼───────────────────┤
+│"Escorca"                   │0.13110539845758354│
+├────────────────────────────┼───────────────────┤
+│"Fornalutx"                 │0.1275             │
+├────────────────────────────┼───────────────────┤
+│"Costitx"                   │0.12530712530712532│
+├────────────────────────────┼───────────────────┤
+│"Puigpunyent"               │0.12378640776699029│
+├────────────────────────────┼───────────────────┤
+│"Santa Margalida"           │0.1234866828087167 │
+├────────────────────────────┼───────────────────┤
+│"Porreres"                  │0.12259615384615384│
+├────────────────────────────┼───────────────────┤
+│"Santanyí"                  │0.12200956937799043│
+├────────────────────────────┼───────────────────┤
+│"Ses Salines"               │0.12171837708830549│
+├────────────────────────────┼───────────────────┤
+│"Manacor"                   │0.12142857142857143│
+├────────────────────────────┼───────────────────┤
+│"Pollença"                  │0.11888111888111888│
+├────────────────────────────┼───────────────────┤
+│"Esporles"                  │0.11135371179039301│
+├────────────────────────────┼───────────────────┤
+│"Maria de la Salut"         │0.1111111111111111 │
+├────────────────────────────┼───────────────────┤
+│"Sant Llorenç des Cardassar"│0.10991379310344827│
+├────────────────────────────┼───────────────────┤
+│"Felanitx"                  │0.10874200426439233│
+├────────────────────────────┼───────────────────┤
+│"Valldemossa"               │0.10179640718562874│
+├────────────────────────────┼───────────────────┤
+│"Banyalbufar"               │0.10119047619047619│
+├────────────────────────────┼───────────────────┤
+│"Artà"                      │0.099609375        │
+├────────────────────────────┼───────────────────┤
+│"Deià"                      │0.09375            │
+├────────────────────────────┼───────────────────┤
+│"Estellencs"                │0.09272727272727273│
+├────────────────────────────┼───────────────────┤
+│"Capdepera"                 │0.09074733096085409│
+├────────────────────────────┼───────────────────┤
+│"Son Servera"               │0.08360655737704918│
+└────────────────────────────┴───────────────────┘
+
+
+18. Determina el valor d'intermediació (betweenness) de cada node del graf, ordenats de major a menor.
+
+CALL gds.betweenness.stream('grafo')
+YIELD nodeId, score
+RETURN gds.util.asNode(nodeId).nom AS Población, score AS Intermediación
+ORDER BY Intermediación DESC
+
+
+// Resultado de la ejecución
+//
+
+╒════════════════════════════╤══════════════════╕
+│Población                   │Intermediación    │
+╞════════════════════════════╪══════════════════╡
+│"Palma"                     │1601.0            │
+├────────────────────────────┼──────────────────┤
+│"Inca"                      │1281.5000000000005│
+├────────────────────────────┼──────────────────┤
+│"Santa Maria del Camí"      │1134.4999999999998│
+├────────────────────────────┼──────────────────┤
+│"Marratxí"                  │1071.9999999999998│
+├────────────────────────────┼──────────────────┤
+│"Consell"                   │933.5000000000003 │
+├────────────────────────────┼──────────────────┤
+│"Binissalem"                │915.0000000000003 │
+├────────────────────────────┼──────────────────┤
+│"Lloseta"                   │899.0000000000003 │
+├────────────────────────────┼──────────────────┤
+│"Sineu"                     │704.0000000000002 │
+├────────────────────────────┼──────────────────┤
+│"Algaida"                   │694.0             │
+├────────────────────────────┼──────────────────┤
+│"Montuïri"                  │660.5             │
+├────────────────────────────┼──────────────────┤
+│"Vilafranca de Bonany"      │545.0             │
+├────────────────────────────┼──────────────────┤
+│"Andratx"                   │487.0             │
+├────────────────────────────┼──────────────────┤
+│"Manacor"                   │422.0             │
+├────────────────────────────┼──────────────────┤
+│"Sóller"                    │415.9999999999999 │
+├────────────────────────────┼──────────────────┤
+│"Bunyola"                   │364.9999999999999 │
+├────────────────────────────┼──────────────────┤
+│"Alcúdia"                   │346.9999999999999 │
+├────────────────────────────┼──────────────────┤
+│"Pollença"                  │324.49999999999994│
+├────────────────────────────┼──────────────────┤
+│"Escorca"                   │324.49999999999994│
+├────────────────────────────┼──────────────────┤
+│"Llucmajor"                 │306.5             │
+├────────────────────────────┼──────────────────┤
+│"Sant Llorenç des Cardassar"│290.0             │
+├────────────────────────────┼──────────────────┤
+│"Esporles"                  │289.0             │
+├────────────────────────────┼──────────────────┤
+│"Puigpunyent"               │289.0             │
+├────────────────────────────┼──────────────────┤
+│"Calvià"                    │289.0             │
+├────────────────────────────┼──────────────────┤
+│"Campos"                    │249.0             │
+├────────────────────────────┼──────────────────┤
+│"Costitx"                   │206.00000000000009│
+├────────────────────────────┼──────────────────┤
+│"Sencelles"                 │206.00000000000006│
+├────────────────────────────┼──────────────────┤
+│"Santa Eugènia"             │206.00000000000006│
+├────────────────────────────┼──────────────────┤
+│"Sa Pobla"                  │147.0             │
+├────────────────────────────┼──────────────────┤
+│"Santa Margalida"           │147.0             │
+├────────────────────────────┼──────────────────┤
+│"Maria de la Salut"         │147.0             │
+├────────────────────────────┼──────────────────┤
+│"Muro"                      │147.0             │
+├────────────────────────────┼──────────────────┤
+│"Artà"                      │123.5             │
+├────────────────────────────┼──────────────────┤
+│"Banyalbufar"               │122.0             │
+├────────────────────────────┼──────────────────┤
+│"Estellencs"                │122.0             │
+├────────────────────────────┼──────────────────┤
+│"Deià"                      │116.0             │
+├────────────────────────────┼──────────────────┤
+│"Valldemossa"               │116.0             │
+├────────────────────────────┼──────────────────┤
+│"Campanet"                  │99.0              │
+├────────────────────────────┼──────────────────┤
+│"Santanyí"                  │50.0              │
+├────────────────────────────┼──────────────────┤
+│"Petra"                     │50.0              │
+├────────────────────────────┼──────────────────┤
+│"Selva"                     │50.0              │
+├────────────────────────────┼──────────────────┤
+│"Capdepera"                 │50.0              │
+├────────────────────────────┼──────────────────┤
+│"Porreres"                  │29.5              │
+├────────────────────────────┼──────────────────┤
+│"Son Servera"               │24.5              │
+├────────────────────────────┼──────────────────┤
+│"Ariany"                    │0.0               │
+├────────────────────────────┼──────────────────┤
+│"Búger"                     │0.0               │
+├────────────────────────────┼──────────────────┤
+│"Fornalutx"                 │0.0               │
+├────────────────────────────┼──────────────────┤
+│"Lloret de Vistalegre"      │0.0               │
+├────────────────────────────┼──────────────────┤
+│"Llubí"                     │0.0               │
+├────────────────────────────┼──────────────────┤
+│"Mancor de la Vall"         │0.0               │
+├────────────────────────────┼──────────────────┤
+│"Sant Joan"                 │0.0               │
+├────────────────────────────┼──────────────────┤
+│"Ses Salines"               │0.0               │
+├────────────────────────────┼──────────────────┤
+│"Felanitx"                  │0.0               │
+└────────────────────────────┴──────────────────┘
+
+
+19. Determina el nombre de triangles de cada node del graf, ordenats de major a menor. Per fer-ho, abans projecta el teu graf a un nou graf GDS no dirigit.
+
+// Projectamos el grafo con los ajustes necesarios para usar los siguientes algoritmos
+
+CALL gds.graph.project(
+    'grafo_comunidad',
+    ['Poble',  'Ciutat'],
+    {PISTA: {properties: ['distancia', 'temps'], orientation: 'UNDIRECTED'}, CARRETERA: {properties: ['distancia', 'temps'], orientation: 'UNDIRECTED'}}
+)
+
+// Resultado de la ejecución
+//
+
+╒══════════════════════════════════════════════════════════════════════╤══════════════════════════════════════════════════════════════════════╤═════════════════╤═════════╤═════════════════╤═════════════╕
+│nodeProjection                                                        │relationshipProjection                                                │graphName        │nodeCount│relationshipCount│projectMillis│
+╞══════════════════════════════════════════════════════════════════════╪══════════════════════════════════════════════════════════════════════╪═════════════════╪═════════╪═════════════════╪═════════════╡
+│{Poble: {label: "Poble", properties: {}}, Ciutat: {label: "Ciutat", pr│{PISTA: {aggregation: "DEFAULT", orientation: "UNDIRECTED", indexInver│"grafo_comunidad"│52       │194              │286          │
+│operties: {}}}                                                        │se: false, properties: {distancia: {aggregation: "DEFAULT", property: │                 │         │                 │             │
+│                                                                      │"distancia", defaultValue: null}, temps: {aggregation: "DEFAULT", prop│                 │         │                 │             │
+│                                                                      │erty: "temps", defaultValue: null}}, type: "PISTA"}, CARRETERA: {aggre│                 │         │                 │             │
+│                                                                      │gation: "DEFAULT", orientation: "UNDIRECTED", indexInverse: false, pro│                 │         │                 │             │
+│                                                                      │perties: {distancia: {aggregation: "DEFAULT", property: "distancia", d│                 │         │                 │             │
+│                                                                      │efaultValue: null}, temps: {aggregation: "DEFAULT", property: "temps",│                 │         │                 │             │
+│                                                                      │ defaultValue: null}}, type: "CARRETERA"}}                            │                 │         │                 │             │
+└──────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────┴─────────────────┴─────────┴─────────────────┴─────────────┘
+
+// Determinamos el número de triángulos
+
+CALL gds.triangleCount.stream('grafo_comunidad')
+YIELD nodeId, triangleCount
+RETURN gds.util.asNode(nodeId).nom AS Población, triangleCount AS Triángulos
+ORDER BY Triángulos DESC
+
+// Resultado de la ejecución
+//
+
+╒════════════════════════════╤══════════╕
+│Población                   │Triángulos│
+╞════════════════════════════╪══════════╡
+│"Inca"                      │4         │
+├────────────────────────────┼──────────┤
+│"Sineu"                     │3         │
+├────────────────────────────┼──────────┤
+│"Campanet"                  │2         │
+├────────────────────────────┼──────────┤
+│"Petra"                     │2         │
+├────────────────────────────┼──────────┤
+│"Selva"                     │2         │
+├────────────────────────────┼──────────┤
+│"Manacor"                   │1         │
+├────────────────────────────┼──────────┤
+│"Santanyí"                  │1         │
+├────────────────────────────┼──────────┤
+│"Sóller"                    │1         │
+├────────────────────────────┼──────────┤
+│"Ariany"                    │1         │
+├────────────────────────────┼──────────┤
+│"Búger"                     │1         │
+├────────────────────────────┼──────────┤
+│"Escorca"                   │1         │
+├────────────────────────────┼──────────┤
+│"Fornalutx"                 │1         │
+├────────────────────────────┼──────────┤
+│"Llubí"                     │1         │
+├────────────────────────────┼──────────┤
+│"Mancor de la Vall"         │1         │
+├────────────────────────────┼──────────┤
+│"Sant Joan"                 │1         │
+├────────────────────────────┼──────────┤
+│"Ses Salines"               │1         │
+├────────────────────────────┼──────────┤
+│"Vilafranca de Bonany"      │1         │
+├────────────────────────────┼──────────┤
+│"Campos"                    │1         │
+├────────────────────────────┼──────────┤
+│"Felanitx"                  │1         │
+├────────────────────────────┼──────────┤
+│"Marratxí"                  │0         │
+├────────────────────────────┼──────────┤
+│"Palma"                     │0         │
+├────────────────────────────┼──────────┤
+│"Pollença"                  │0         │
+├────────────────────────────┼──────────┤
+│"Sa Pobla"                  │0         │
+├────────────────────────────┼──────────┤
+│"Santa Margalida"           │0         │
+├────────────────────────────┼──────────┤
+│"Son Servera"               │0         │
+├────────────────────────────┼──────────┤
+│"Algaida"                   │0         │
+├────────────────────────────┼──────────┤
+│"Artà"                      │0         │
+├────────────────────────────┼──────────┤
+│"Banyalbufar"               │0         │
+├────────────────────────────┼──────────┤
+│"Binissalem"                │0         │
+├────────────────────────────┼──────────┤
+│"Bunyola"                   │0         │
+├────────────────────────────┼──────────┤
+│"Consell"                   │0         │
+├────────────────────────────┼──────────┤
+│"Costitx"                   │0         │
+├────────────────────────────┼──────────┤
+│"Deià"                      │0         │
+├────────────────────────────┼──────────┤
+│"Esporles"                  │0         │
+├────────────────────────────┼──────────┤
+│"Estellencs"                │0         │
+├────────────────────────────┼──────────┤
+│"Lloret de Vistalegre"      │0         │
+├────────────────────────────┼──────────┤
+│"Lloseta"                   │0         │
+├────────────────────────────┼──────────┤
+│"Maria de la Salut"         │0         │
+├────────────────────────────┼──────────┤
+│"Montuïri"                  │0         │
+├────────────────────────────┼──────────┤
+│"Muro"                      │0         │
+├────────────────────────────┼──────────┤
+│"Porreres"                  │0         │
+├────────────────────────────┼──────────┤
+│"Puigpunyent"               │0         │
+├────────────────────────────┼──────────┤
+│"Sencelles"                 │0         │
+├────────────────────────────┼──────────┤
+│"Sant Llorenç des Cardassar"│0         │
+├────────────────────────────┼──────────┤
+│"Santa Eugènia"             │0         │
+├────────────────────────────┼──────────┤
+│"Santa Maria del Camí"      │0         │
+├────────────────────────────┼──────────┤
+│"Valldemossa"               │0         │
+├────────────────────────────┼──────────┤
+│"Llucmajor"                 │0         │
+├────────────────────────────┼──────────┤
+│"Alcúdia"                   │0         │
+├────────────────────────────┼──────────┤
+│"Andratx"                   │0         │
+├────────────────────────────┼──────────┤
+│"Calvià"                    │0         │
+├────────────────────────────┼──────────┤
+│"Capdepera"                 │0         │
+└────────────────────────────┴──────────┘
+
+
+20. Tria dos noms de ciutats o pobles que no estiguin directament connectats i determina el número de veïnats comú.
+
+MATCH (costitx: Poble {nom: "Costitx"}), (inca: Ciutat {nom: "Inca"})
+RETURN gds.alpha.linkprediction.commonNeighbors(costitx, inca) AS Vecinos
+
+// Resultado de la ejecución
+//
+
+╒═══════╕
+│Vecinos│
+╞═══════╡
+│1.0    │
+└───────┘
