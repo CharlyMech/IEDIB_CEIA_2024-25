@@ -1,0 +1,454 @@
+1. Recupera el títol de tots els llibres:
+- Query
+MATCH (book:Book)
+RETURN book.title;
+- Output
+╒══════════════════════════════════════════╕
+│book.title                                │
+╞══════════════════════════════════════════╡
+│"The martian chronicles"                  │
+├──────────────────────────────────────────┤
+│"The Lord of the Rings: The Two Towers"   │
+├──────────────────────────────────────────┤
+│"Origin"                                  │
+├──────────────────────────────────────────┤
+│"A Brief History of Time"                 │
+├──────────────────────────────────────────┤
+│"Harry Potter and the prisoner of azkaban"│
+├──────────────────────────────────────────┤
+│"I, Robot"                                │
+├──────────────────────────────────────────┤
+│"Metro 2033"                              │
+├──────────────────────────────────────────┤
+│"Moby-Dick"                               │
+├──────────────────────────────────────────┤
+│"Clean Code"                              │
+├──────────────────────────────────────────┤
+│"Everything Is F*cked: A Book About Hope" │
+└──────────────────────────────────────────┘
+
+2. Tria el nom d’un gènere i recupera el nom dels usuaris que hi estan interessats:
+- Query:
+MATCH (user:User)-[:INTERESTED_IN]->(genre:Genre {name: 'Sci-Fi'})
+RETURN user.username;
+- Output:
+╒════════════════╕
+│user.username   │
+╞════════════════╡
+│"will_smith"    │
+├────────────────┤
+│"ryan_reynolds" │
+├────────────────┤
+│"monkey_d_luffy"│
+└────────────────┘
+
+3. Recupera el títol dels llibres i pel·lícules del gènere triat abans. Indica si és un llibre o una pel·lícula:
+- Query:
+MATCH (n)-[:BELONGS_TO]->(genre:Genre {name: 'Sci-Fi'})
+RETURN n.title, 
+       CASE WHEN n:Book THEN 'Book'
+            WHEN n:Movie THEN 'Movie'
+       END AS type;
+- Output:
+╒══════════════════════════╤═══════╕
+│n.title                   │type   │
+╞══════════════════════════╪═══════╡
+│"Alien: the 8th passenger"│"Movie"│
+├──────────────────────────┼───────┤
+│"I, Robot"                │"Movie"│
+├──────────────────────────┼───────┤
+│"The martian chronicles"  │"Book" │
+├──────────────────────────┼───────┤
+│"I, Robot"                │"Book" │
+├──────────────────────────┼───────┤
+│"Metro 2033"              │"Book" │
+└──────────────────────────┴───────┘
+
+4. Tria el nom d’un usuari i recupera el títol dels llibres que pertanyen als gèneres que li interessen:
+- Query:
+MATCH (user:User {username: 'monkey_d_luffy'})-[:INTERESTED_IN]->(genre:Genre)<-[:BELONGS_TO]-(book:Book)
+RETURN genre.name, book.title;
+- Output:
+╒═══════════╤═══════════════════════════════════════╕
+│genre.name │book.title                             │
+╞═══════════╪═══════════════════════════════════════╡
+│"Sci-Fi"   │"The martian chronicles"               │
+├───────────┼───────────────────────────────────────┤
+│"Sci-Fi"   │"I, Robot"                             │
+├───────────┼───────────────────────────────────────┤
+│"Sci-Fi"   │"Metro 2033"                           │
+├───────────┼───────────────────────────────────────┤
+│"Adventure"│"The Lord of the Rings: The Two Towers"│
+├───────────┼───────────────────────────────────────┤
+│"Adventure"│"Moby-Dick"                            │
+└───────────┴───────────────────────────────────────┘
+
+5. Tria el títol d’un llibre i recupera quina és la mitjana de les seves valoracions:
+- Query:
+MATCH (book:Book {title: 'I, Robot'})<-[review:REVIEWS]-(user:User)
+RETURN AVG(review.rating) AS avg;
+- Output:
+╒═══╕
+│avg│
+╞═══╡
+│4.0│
+└───┘
+
+6. Recupera el nom dels usuaris nascuts abans de l’any 1990:
+- Query:
+MATCH (user:User)
+WHERE user.birth_year < 1990
+RETURN user.username;
+- Output:
+╒════════════════════╕
+│user.username       │
+╞════════════════════╡
+│"dwayne_johnson"    │
+├────────────────────┤
+│"scarlett_johansson"│
+├────────────────────┤
+│"ryan_reynolds"     │
+├────────────────────┤
+│"paul_walker"       │
+└────────────────────┘
+
+7. Recupera el títol de totes les pel·lícules basades en algun llibre, indicant el títol del llibre:
+- Query:
+MATCH (movie:Movie)-[:BASED_ON]->(book:Book)
+RETURN movie.title, book.title;
+- Output:
+╒══════════════════════════════════════════╤══════════════════════════════════════════╕
+│movie.title                               │book.title                                │
+╞══════════════════════════════════════════╪══════════════════════════════════════════╡
+│"Harry Potter and the prisoner of azkaban"│"Harry Potter and the prisoner of azkaban"│
+├──────────────────────────────────────────┼──────────────────────────────────────────┤
+│"The Lord of the Rings: The Two Towers"   │"The Lord of the Rings: The Two Towers"   │
+├──────────────────────────────────────────┼──────────────────────────────────────────┤
+│"I, Robot"                                │"I, Robot"                                │
+└──────────────────────────────────────────┴──────────────────────────────────────────┘
+
+8. Recupera el títol dels llibres amb valoració de 4 o més:
+- Query:
+MATCH (book:Book)<-[review:REVIEWS]-(u)
+WHERE review.rating >= 4
+RETURN book.title;
+- Output:
+╒═════════════════════════════════════════╕
+│book.title                               │
+╞═════════════════════════════════════════╡
+│"The martian chronicles"                 │
+├─────────────────────────────────────────┤
+│"The Lord of the Rings: The Two Towers"  │
+├─────────────────────────────────────────┤
+│"The Lord of the Rings: The Two Towers"  │
+├─────────────────────────────────────────┤
+│"Origin"                                 │
+├─────────────────────────────────────────┤
+│"Origin"                                 │
+├─────────────────────────────────────────┤
+│"A Brief History of Time"                │
+├─────────────────────────────────────────┤
+│"A Brief History of Time"                │
+├─────────────────────────────────────────┤
+│"I, Robot"                               │
+├─────────────────────────────────────────┤
+│"Metro 2033"                             │
+├─────────────────────────────────────────┤
+│"Metro 2033"                             │
+├─────────────────────────────────────────┤
+│"Moby-Dick"                              │
+├─────────────────────────────────────────┤
+│"Clean Code"                             │
+├─────────────────────────────────────────┤
+│"Everything Is F*cked: A Book About Hope"│
+└─────────────────────────────────────────┘
+
+9. Recupera la valoració mitjana de cada gènere, ordenada de major a menor:
+- Query:
+MATCH (u)-[review:REVIEWS]->(n)-[:BELONGS_TO]->(genre:Genre)
+RETURN genre.name, AVG(review.rating) AS avg
+ORDER BY avg DESC;
+- Output: 
+╒═════════════════════════╤══════════════════╕
+│genre.name               │avg               │
+╞═════════════════════════╪══════════════════╡
+│"Horror"                 │5.0               │
+├─────────────────────────┼──────────────────┤
+│"Educational Non-fiction"│4.666666666666667 │
+├─────────────────────────┼──────────────────┤
+│"Sci-Fi"                 │4.5               │
+├─────────────────────────┼──────────────────┤
+│"Drama"                  │4.5               │
+├─────────────────────────┼──────────────────┤
+│"Mystery"                │4.333333333333334 │
+├─────────────────────────┼──────────────────┤
+│"Adventure"              │4.142857142857143 │
+├─────────────────────────┼──────────────────┤
+│"Self care"              │4.0               │
+├─────────────────────────┼──────────────────┤
+│"Action"                 │4.0               │
+├─────────────────────────┼──────────────────┤
+│"Comedy"                 │4.0               │
+├─────────────────────────┼──────────────────┤
+│"Fantasy"                │3.9999999999999996│
+├─────────────────────────┼──────────────────┤
+│"Thriller"               │3.5               │
+└─────────────────────────┴──────────────────┘
+
+10. Agrupa usuaris per dècada i recupera la valoració mitjana de cada grup:
+- Query:
+MATCH (user:User)-[review:REVIEWS]->(n)
+WITH toInteger(user.birth_year / 10) * 10 AS decade, AVG(review.rating) AS avg
+RETURN decade, avg;
+- Output
+╒══════╤═════════════════╕
+│decade│avg              │
+╞══════╪═════════════════╡
+│1990  │4.133333333333334│
+├──────┼─────────────────┤
+│1980  │4.555555555555555│
+├──────┼─────────────────┤
+│2000  │4.0              │
+├──────┼─────────────────┤
+│1970  │4.0              │
+└──────┴─────────────────┘
+
+11. Afegeix un nou usuari i una revisió d’un llibre existent:
+- Query:
+CREATE (user:User {username: 'carlos_sanchez', birth_year: 1999}),
+       (user)-[:REVIEWS {rating: 1, review: 'No one follows these steps'}]->(:Book {title: 'Clean Code'});
+- Output:
+Added 2 labels, created 2 nodes, set 5 properties, created 1 relationship, completed after 8 ms.
+
+12. Modifica l’any de naixement i la valoració del nou usuari i revisió:
+- Query:
+MATCH (u:User {username: 'carlos_sanchez'})-[r:REVIEWS]->(:Book {title: 'Clean Code'})
+SET u.birth_year = u.birth_year + 1, r.rating = r.rating - 1
+- Output:
+Set 2 properties, completed after 15 ms.
+
+13. Elimina l’usuari i la revisió creada:
+- Query:
+MATCH (user:User {username: 'carlos_sanchez'})-[review:REVIEWS]->(n)
+DELETE user, review;
+- Output:
+Deleted 1 node, deleted 1 relationship, completed after 27 ms.
+
+14. Recorrer el graf en amplitud i profunditat:
+// Load user graph
+CALL gds.graph.project('userGraph', 'User', 'HAS_FRIEND');
+// Width
+- Query:
+MATCH (startNode:User {username: 'ryan_reynolds'})
+CALL gds.bfs.stream('userGraph', {
+    sourceNode: startNode
+})
+YIELD path
+RETURN path;
+- Output:
+╒══════════════════════════════════════════════════════════════════════╕
+│path                                                                  │
+╞══════════════════════════════════════════════════════════════════════╡
+│(:User {username: "ryan_reynolds",birth_year: 1975})-[:NEXT]->(:User {│
+│username: "will_smith",birth_year: 1990})-[:NEXT]->(:User {username: "│
+│paul_walker",birth_year: 1988})-[:NEXT]->(:User {username: "dwayne_joh│
+│nson",birth_year: 1985})-[:NEXT]->(:User {username: "jason_statham",bi│
+│rth_year: 1995})-[:NEXT]->(:User {username: "adam_sandler",birth_year:│
+│ 2000})-[:NEXT]->(:User {username: "angus_young",birth_year: 1993})-[:│
+│NEXT]->(:User {username: "scarlett_johansson",birth_year: 1980})-[:NEX│
+│T]->(:User {username: "vin_diesel",birth_year: 1992})-[:NEXT]->(:User │
+│{username: "monkey_d_luffy",birth_year: 1997})                        │
+└──────────────────────────────────────────────────────────────────────┘
+// Depth
+- Query:
+MATCH (startNode:User {username: 'ryan_reynolds'})
+CALL gds.dfs.stream('userGraph', {
+    sourceNode: startNode
+})
+YIELD path
+RETURN path;
+- Output:
+╒══════════════════════════════════════════════════════════════════════╕
+│path                                                                  │
+╞══════════════════════════════════════════════════════════════════════╡
+│(:User {username: "ryan_reynolds",birth_year: 1975})-[:NEXT]->(:User {│
+│username: "paul_walker",birth_year: 1988})-[:NEXT]->(:User {username: │
+│"angus_young",birth_year: 1993})-[:NEXT]->(:User {username: "dwayne_jo│
+│hnson",birth_year: 1985})-[:NEXT]->(:User {username: "scarlett_johanss│
+│on",birth_year: 1980})-[:NEXT]->(:User {username: "adam_sandler",birth│
+│_year: 2000})-[:NEXT]->(:User {username: "vin_diesel",birth_year: 1992│
+│})-[:NEXT]->(:User {username: "monkey_d_luffy",birth_year: 1997})-[:NE│
+│XT]->(:User {username: "will_smith",birth_year: 1990})-[:NEXT]->(:User│
+│ {username: "jason_statham",birth_year: 1995})                        │
+└──────────────────────────────────────────────────────────────────────┘
+
+15. Camí més curt entre dos usuaris que no són amics (Dijkstra):
+// Load the graph
+CALL gds.graph.project('userGraph', 'User', 'HAS_FRIEND');
+- Query;
+MATCH (u1:User {username: 'will_smith'}), (u2:User {username: 'paul_walker'})
+CALL gds.shortestPath.dijkstra.stream('userGraph', {
+  sourceNode: u1,
+  targetNode: u2,
+  relationshipTypes: ['HAS_FRIEND']
+})
+YIELD path
+RETURN path;
+// Remove the projection
+CALL gds.graph.drop('userGraph');
+- Output:
+╒══════════════════════════════════════════════════════════════════════╕
+│path                                                                  │
+╞══════════════════════════════════════════════════════════════════════╡
+│(:User {username: "will_smith",birth_year: 1990})-[:PATH_0 {cost: 1.0}│
+│]->(:User {username: "dwayne_johnson",birth_year: 1985})-[:PATH_0 {cos│
+│t: 1.0}]->(:User {username: "ryan_reynolds",birth_year: 1975})-[:PATH_│
+│0 {cost: 1.0}]->(:User {username: "paul_walker",birth_year: 1988})    │
+└──────────────────────────────────────────────────────────────────────┘
+
+16. Grau de sortida (influència) de cada usuari:
+- Query:
+CALL gds.degree.stream('userGraph')
+YIELD nodeId, score
+RETURN gds.util.asNode(nodeId).username AS user, score AS degree
+ORDER BY degree DESC, user DESC;
+- Output:
+╒════════════════════╤══════╕
+│user                │degree│
+╞════════════════════╪══════╡
+│"scarlett_johansson"│3.0   │
+├────────────────────┼──────┤
+│"paul_walker"       │3.0   │
+├────────────────────┼──────┤
+│"will_smith"        │2.0   │
+├────────────────────┼──────┤
+│"vin_diesel"        │2.0   │
+├────────────────────┼──────┤
+│"ryan_reynolds"     │2.0   │
+├────────────────────┼──────┤
+│"monkey_d_luffy"    │2.0   │
+├────────────────────┼──────┤
+│"jason_statham"     │2.0   │
+├────────────────────┼──────┤
+│"dwayne_johnson"    │2.0   │
+├────────────────────┼──────┤
+│"angus_young"       │2.0   │
+├────────────────────┼──────┤
+│"adam_sandler"      │2.0   │
+└────────────────────┴──────┘
+
+17. Proximitat (closeness) de cada usuari:
+CALL gds.closeness.stream('userGraph')
+YIELD nodeId, score
+RETURN gds.util.asNode(nodeId).username AS user, score
+ORDER BY score DESC;
+- Output:
+╒════════════════════╤═══════════════════╕
+│user                │score              │
+╞════════════════════╪═══════════════════╡
+│"will_smith"        │0.6428571428571429 │
+├────────────────────┼───────────────────┤
+│"adam_sandler"      │0.5625             │
+├────────────────────┼───────────────────┤
+│"ryan_reynolds"     │0.5625             │
+├────────────────────┼───────────────────┤
+│"scarlett_johansson"│0.5294117647058824 │
+├────────────────────┼───────────────────┤
+│"dwayne_johnson"    │0.5                │
+├────────────────────┼───────────────────┤
+│"jason_statham"     │0.42857142857142855│
+├────────────────────┼───────────────────┤
+│"paul_walker"       │0.42857142857142855│
+├────────────────────┼───────────────────┤
+│"angus_young"       │0.42857142857142855│
+├────────────────────┼───────────────────┤
+│"vin_diesel"        │0.391304347826087  │
+├────────────────────┼───────────────────┤
+│"monkey_d_luffy"    │0.3103448275862069 │
+└────────────────────┴───────────────────┘
+
+18. Intermediació (betweenness) de cada usuari:
+- Query:
+CALL gds.betweenness.stream('userGraph')
+YIELD nodeId, score
+RETURN gds.util.asNode(nodeId).username AS name, score
+ORDER BY score DESC;
+- Output:
+╒════════════════════╤══════════════════╕
+│name                │score             │
+╞════════════════════╪══════════════════╡
+│"adam_sandler"      │19.166666666666664│
+├────────────────────┼──────────────────┤
+│"will_smith"        │16.333333333333332│
+├────────────────────┼──────────────────┤
+│"scarlett_johansson"│15.0              │
+├────────────────────┼──────────────────┤
+│"paul_walker"       │12.166666666666666│
+├────────────────────┼──────────────────┤
+│"dwayne_johnson"    │9.333333333333332 │
+├────────────────────┼──────────────────┤
+│"vin_diesel"        │9.166666666666666 │
+├────────────────────┼──────────────────┤
+│"ryan_reynolds"     │9.0               │
+├────────────────────┼──────────────────┤
+│"jason_statham"     │6.333333333333333 │
+├────────────────────┼──────────────────┤
+│"angus_young"       │4.833333333333333 │
+├────────────────────┼──────────────────┤
+│"monkey_d_luffy"    │4.666666666666666 │
+└────────────────────┴──────────────────┘
+
+// Drop userGraph projection
+CALL gds.graph.drop('userGraph');
+
+19. Nombre de triangles d’un graf no dirigit:
+// Load undirected graph for users
+CALL gds.graph.project('userGraphUndirected', 'User', {
+        HAS_FRIEND: {
+            type: 'HAS_FRIEND',
+            orientation: 'UNDIRECTED'
+        }
+    });
+- Query:
+CALL gds.triangleCount.stream('userGraphUndirected')
+YIELD nodeId, triangleCount
+RETURN gds.util.asNode(nodeId).username AS user, triangleCount
+ORDER BY triangleCount DESC;
+- Output:
+╒════════════════════╤═════════════╕
+│user                │triangleCount│
+╞════════════════════╪═════════════╡
+│"will_smith"        │5            │
+├────────────────────┼─────────────┤
+│"dwayne_johnson"    │4            │
+├────────────────────┼─────────────┤
+│"scarlett_johansson"│4            │
+├────────────────────┼─────────────┤
+│"ryan_reynolds"     │3            │
+├────────────────────┼─────────────┤
+│"angus_young"       │2            │
+├────────────────────┼─────────────┤
+│"jason_statham"     │1            │
+├────────────────────┼─────────────┤
+│"adam_sandler"      │1            │
+├────────────────────┼─────────────┤
+│"vin_diesel"        │1            │
+├────────────────────┼─────────────┤
+│"paul_walker"       │0            │
+├────────────────────┼─────────────┤
+│"monkey_d_luffy"    │0            │
+└────────────────────┴─────────────┘
+
+// Drop userGraph projection
+CALL gds.graph.drop('userGraphUndirected');
+
+20. Veïnats comuns entre dos usuaris no amics:
+- Query:
+MATCH (u1:User {username: 'will_smith'})-[:HAS_FRIEND]-(common:User)-[:HAS_FRIEND]-(u2:User {username: 'angus_young'})
+RETURN COUNT(common) as common_friends;
+- Output:
+╒══════════════╕
+│common_friends│
+╞══════════════╡
+│2             │
+└──────────────┘
