@@ -74,3 +74,12 @@ INNER JOIN soccer.results AS r ON r.date = g.date
 WHERE g.penalty=TRUE AND g.team='Spain' AND r.tournament = 'UEFA Euro'
 GROUP BY g.scorer
 ORDER BY g.scorer DESC;
+
+-- 6
+SELECT g.scorer, COUNT(*) AS goals
+FROM soccer.goalscorers AS g
+INNER JOIN soccer.results AS r ON r.date = g.date
+WHERE g.own_goal=FALSE AND r.tournament = 'FIFA World Cup'
+GROUP BY g.scorer
+ORDER BY goals DESC
+LIMIT 5;
