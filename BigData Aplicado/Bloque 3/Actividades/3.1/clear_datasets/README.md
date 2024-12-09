@@ -16,4 +16,4 @@ poetry run python clear_datasets/transform.py [csv_url] -o/--output [file_name]
 
 ```
 
-The `-o/--output` parameter is not required, the name from the URL will be set as default
+The `-o/--output` parameter is not required, the name from the URL will be set as default. Type `-h` for more info.
