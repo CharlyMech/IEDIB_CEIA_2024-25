@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "clear-datasets"
+version = "0.1.0"
+description = ""
+authors = ["CharlyMech <sanchezreciocarlos99@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pandas = "^2.2.3"
+argparse = "^1.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
