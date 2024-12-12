@@ -6,3 +6,6 @@ venv/
 
 # Ignore DS files from MacOS Finder
 .DS_Store
+
+# Ignore Python's caché
+__pycache__
