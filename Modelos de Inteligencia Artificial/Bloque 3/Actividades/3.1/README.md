@@ -24,6 +24,8 @@ source .venv/bin/activate
 pip3 install requirements.txt
 ```
 
+_NOTICE_ that the `requirements.txt` file containes more packages than needed for this script, the reason why is because there are also libraries and packages required for the task's notebook. This is completely correct.
+
 -  Execute the script (`py` or `python` would be needed instead of the following one depending on your OS):
 
 ```bash
