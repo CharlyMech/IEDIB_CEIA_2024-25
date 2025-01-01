@@ -1,0 +1,40 @@
+-- Import data stored in Hive to Impala as parquet format for both titles and credits tables
+CREATE TABLE titles_parquet
+STORED AS PARQUET
+AS SELECT * FROM titles;
+
+CREATE TABLE credits_parquet
+STORED AS PARQUET
+AS SELECT * FROM credits;
+
+-- 1
+SELECT * 
+FROM titles_parquet
+WHERE seasons > 1 AND type = 'SHOW' AND imdb_score IS NOT NULL
+ORDER BY imdb_score DESC
+LIMIT 10;
+
+-- 2
+SELECT release_year, sum(imdb_votes) AS votes
+FROM titles_parquet
+WHERE type = 'SHOW' AND imdb_votes IS NOT NULL
+GROUP BY release_year
+ORDER BY votes DESC
+LIMIT 10;
+
+-- 3
+SELECT name, count(name) AS films_num
+FROM credits_parquet
+WHERE `role` = 'DIRECTOR'
+GROUP BY name
+ORDER BY films_num DESC
+LIMIT 10;
+
+-- 4
+SELECT c.name, AVG(t.imdb_score) AS imdb_avg
+FROM credits_parquet AS c
+JOIN titles_parquet AS t ON c.id = t.id
+WHERE c.`role` = 'ACTOR' AND t.imdb_score IS NOT NULL
+GROUP BY c.name
+ORDER BY imdb_avg DESC
+LIMIT 10;
