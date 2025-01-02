@@ -1,0 +1,87 @@
+-- Create database and load data
+CREATE DATABASE library;
+
+USE library;
+
+CREATE TABLE library.books (
+    id INT,
+    book_info STRUCT<title: STRING, author: STRING, `year`: INT>,
+    themes ARRAY<STRING>,
+    library_copies MAP<STRING, DOUBLE>
+) STORED AS PARQUET;
+
+INSERT INTO library.books
+    SELECT 2,
+    NAMED_STRUCT('title', 'Sapiens', 'author', 'Yuval Noah Harari', 'year', 2011), 
+    ARRAY('Assaig', 'Història', 'Antropologia', 'Societat'), 
+    MAP('Llevant', 4.0, 'Ponent', 3.0);
+
+INSERT INTO library.books
+    SELECT 2,
+    NAMED_STRUCT('title', 'Sapiens', 'author', 'Yuval Noah Harari', 'year', 2011), 
+    ARRAY('Assaig', 'Història', 'Antropologia', 'Societat'), 
+    MAP('Llevant', 4.0, 'Ponent', 3.0);
+
+INSERT INTO library.books
+    SELECT 3,
+    NAMED_STRUCT('title', 'Dune', 'author', 'Frank Herbert', 'year', 1965), 
+    ARRAY('Ficció', 'Aventura', 'Ciència-ficció'), 
+    MAP('Centre', 7.0, 'Ponent', 2.0);
+
+INSERT INTO library.books
+    SELECT 4,
+    NAMED_STRUCT('title', 'El Senyor dels anells', 'author', 'J.R.R. Tolkien', 'year', 1954), 
+    ARRAY('Ficció', 'Aventura', 'Fantasia'), 
+    MAP('Centre', 8.0, 'Llevant', 3.0);
+
+INSERT INTO library.books
+    SELECT 5,
+    NAMED_STRUCT('title', 'Història de dues ciutats', 'author', 'Charles Dickens', 'year', 1859), 
+    ARRAY('Ficció', 'Història', 'Drama'), 
+    MAP('Llevant', 2.0);
+
+-- 1 Hive
+SELECT book_info.title 
+FROM library.books
+WHERE book_info.`year` >= 1900 AND book_info.`year` < 2000;
+
+-- 2 Hive
+SELECT book_info.title 
+FROM library.books
+WHERE array_contains(themes, 'Història');
+
+-- 3 Hive
+SELECT SUM(library_copies['Llevant'])
+FROM library.books
+WHERE library_copies['Llevant'] IS NOT NULL
+
+-- 4 Hive
+SELECT book_info.title
+FROM library.books
+WHERE library_copies['Centre'] IS NOT NULL
+    AND library_copies['Centre'] > 0
+    AND array_contains(themes, 'Ficció');
+
+-- Invalidate metadata to execute queries with Impala
+
+-- 1 Impala
+SELECT book_info.title 
+FROM library.books
+WHERE book_info.year >= 1900 AND book_info.`year` < 2000;
+
+-- 2 Impala
+SELECT book_info.title
+FROM library.books, books.themes AS book_themes
+WHERE book_themes.item = 'Història';
+
+-- 3 Impala
+SELECT SUM(copies.value)
+FROM library.books, books.library_copies AS copies
+WHERE copies.key = 'Llevant';
+
+-- 4 Impala
+SELECT book_info.title
+FROM library.books, books.library_copies AS copies, books.themes AS book_themes
+WHERE copies.key = 'Centre'
+    AND copies.value > 0
+    AND book_themes.item = 'Ficció';
