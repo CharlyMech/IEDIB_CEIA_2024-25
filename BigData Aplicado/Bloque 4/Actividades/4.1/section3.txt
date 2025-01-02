@@ -1,0 +1,50 @@
+-- Create database and prepare all data
+CREATE DATABASE centres;
+
+USE centres;
+
+CREATE EXTERNAL TABLE ext_centres ( content STRING ) 
+LOCATION '/user/cloudera/municipis/'
+
+SELECT get_json_object(content,'$.data') FROM ext_centres; -- Test
+
+CREATE TABLE centres.centre (
+    adreca STRING,
+    cif STRING,
+    codiIlla STRING,
+    codiMunicipi STRING,
+    codiOficial STRING,
+    cp STRING,
+    esPublic BOOLEAN,
+    latitud DOUBLE,
+    longitud DOUBLE,
+    mail STRING,
+    nom STRING,
+    nomEtapa ARRAY<STRING>,
+    nomIlla STRING,
+    nomMunicipi STRING,
+    telf1 STRING,
+    tipusCentreNomCa STRING,
+    web STRING
+) STORED AS PARQUET;
+
+INSERT INTO TABLE centres.centre
+SELECT
+    get_json_object(content,'$.data.adreca') AS adreca,
+    get_json_object(content,'$.data.cif') AS cif,
+    get_json_object(content,'$.data.codiIlla') AS codiIlla,
+    get_json_object(content,'$.data.codiMunicipi') AS codiMunicipi,
+    get_json_object(content,'$.data.codiMunicipi') AS codiMunicipi,
+    get_json_object(content,'$.data.cp') AS cp,
+    CAST(get_json_object(content, '$.data.esPublic') AS BOOLEAN) AS esPublic,
+    CAST(get_json_object(content, '$.data.latitud') AS DOUBLE) AS latitud,
+    CAST(get_json_object(content, '$.data.longituf') AS DOUBLE) AS longitud,
+    get_json_object(content,'$.data.mail') AS mail,
+    get_json_object(content,'$.data.nom') AS nom,
+    SPLIT(get_json_object(content, '$.data.nomEtapa'), ', ') AS nomEtapa,
+    get_json_object(content,'$.data.nomIlla') AS nomIlla,
+    get_json_object(content,'$.data.nomMunicipi') AS nomMunicipi,
+    get_json_object(content,'$.data.telf1') AS telf1,
+    get_json_object(content,'$.data.tipusCentreNomCa') AS tipusCentreNomCa,
+    get_json_object(content,'$.data.web') AS web
+FROM ext_centres;
