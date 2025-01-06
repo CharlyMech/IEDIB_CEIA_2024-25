@@ -3,10 +3,10 @@ CREATE DATABASE centres;
 
 USE centres;
 
-CREATE EXTERNAL TABLE ext_centres ( content STRING ) 
-LOCATION '/user/cloudera/municipis/'
+CREATE EXTERNAL TABLE ext_centres (centre STRING)
+LOCATION '/user/cloudera/centres';
 
-SELECT get_json_object(content,'$.data') FROM ext_centres; -- Test
+SELECT * FROM ext_centres; -- Test
 
 CREATE TABLE centres.centre (
     adreca STRING,
@@ -28,23 +28,48 @@ CREATE TABLE centres.centre (
     web STRING
 ) STORED AS PARQUET;
 
-INSERT INTO TABLE centres.centre
+INSERT INTO TABLE centre
 SELECT
-    get_json_object(content,'$.data.adreca') AS adreca,
-    get_json_object(content,'$.data.cif') AS cif,
-    get_json_object(content,'$.data.codiIlla') AS codiIlla,
-    get_json_object(content,'$.data.codiMunicipi') AS codiMunicipi,
-    get_json_object(content,'$.data.codiMunicipi') AS codiMunicipi,
-    get_json_object(content,'$.data.cp') AS cp,
-    CAST(get_json_object(content, '$.data.esPublic') AS BOOLEAN) AS esPublic,
-    CAST(get_json_object(content, '$.data.latitud') AS DOUBLE) AS latitud,
-    CAST(get_json_object(content, '$.data.longituf') AS DOUBLE) AS longitud,
-    get_json_object(content,'$.data.mail') AS mail,
-    get_json_object(content,'$.data.nom') AS nom,
-    SPLIT(get_json_object(content, '$.data.nomEtapa'), ', ') AS nomEtapa,
-    get_json_object(content,'$.data.nomIlla') AS nomIlla,
-    get_json_object(content,'$.data.nomMunicipi') AS nomMunicipi,
-    get_json_object(content,'$.data.telf1') AS telf1,
-    get_json_object(content,'$.data.tipusCentreNomCa') AS tipusCentreNomCa,
-    get_json_object(content,'$.data.web') AS web
+    get_json_object(centre,'$.adreca') AS adreca,
+    get_json_object(centre,'$.cif') AS cif,
+    get_json_object(centre,'$.codiIlla') AS codiIlla,
+    get_json_object(centre,'$.codiMunicipi') AS codiMunicipi,
+    get_json_object(centre,'$.codiMunicipi') AS codiMunicipi,
+    get_json_object(centre,'$.cp') AS cp,
+    CAST(get_json_object(centre, '$.esPublic') AS BOOLEAN) AS esPublic,
+    CAST(get_json_object(centre, '$.latitud') AS DOUBLE) AS latitud,
+    CAST(get_json_object(centre, '$.longituf') AS DOUBLE) AS longitud,
+    get_json_object(centre,'$.mail') AS mail,
+    get_json_object(centre,'$.nom') AS nom,
+    SPLIT(get_json_object(centre, '$.nomEtapa'), ', ') AS nomEtapa,
+    get_json_object(centre,'$.nomIlla') AS nomIlla,
+    get_json_object(centre,'$.nomMunicipi') AS nomMunicipi,
+    get_json_object(centre,'$.telf1') AS telf1,
+    get_json_object(centre,'$.tipusCentreNomCa') AS tipusCentreNomCa,
+    get_json_object(centre,'$.web') AS web
 FROM ext_centres;
+
+SELECT *  FROM centre; -- Test
+
+-- 1
+SELECT COUNT(*)
+FROM centre
+WHERE nomilla = 'Eivissa' AND espublic=TRUE;
+
+-- 2
+SELECT nom
+FROM centre
+WHERE nommunicipi='Palma' 
+    AND LOWER(tipuscentrenomca) LIKE '%institut%educació secundària%';
+
+-- 3
+SELECT COUNT(tipuscentrenomca), tipuscentrenomca
+FROM centre
+WHERE nomilla='Menorca'
+GROUP BY tipuscentrenomca;
+
+-- 4
+SELECT nom
+FROM centres.centre t, t.nomEtapa etapa
+WHERE nomIlla = 'Mallorca'
+  AND etapa.item = 'Grau superior';
