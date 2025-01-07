@@ -1,0 +1,147 @@
+# 1
+create 'vehicles', 'info_general', 'conservacio', 'propietari', 'ubicacio'
+
+# 2
+put 'vehicles', '1', 'info_general:marca', 'Toyota'
+put 'vehicles', '1', 'info_general:model', 'Corolla'
+put 'vehicles', '1', 'info_general:matricula', '1234ABC'
+put 'vehicles', '1', 'info_general:preu', '12000'
+put 'vehicles', '1', 'conservacio:any', '2015'
+put 'vehicles', '1', 'conservacio:km', '120000'
+put 'vehicles', '1', 'conservacio:estat', 'bo'
+put 'vehicles', '1', 'propietari:nif', '12345678A'
+put 'vehicles', '1', 'propietari:nom', 'Joan Martínez'
+put 'vehicles', '1', 'propietari:telefon', '623456789'
+put 'vehicles', '1', 'propietari:mail', 'joan.martinez@email.com'
+put 'vehicles', '1', 'ubicacio:ciutat', 'Palma'
+put 'vehicles', '1', 'ubicacio:illa', 'Mallorca'
+put 'vehicles', '1', 'ubicacio:longitud', '2.650160'
+put 'vehicles', '1', 'ubicacio:latitud', '39.569600'
+
+put 'vehicles', '2', 'info_general:marca', 'Ford'
+put 'vehicles', '2', 'info_general:model', 'Focus'
+put 'vehicles', '2', 'info_general:matricula', '5678DEF'
+put 'vehicles', '2', 'info_general:preu', '15500'
+put 'vehicles', '2', 'conservacio:any', '2018'
+put 'vehicles', '2', 'conservacio:km', '55000'
+put 'vehicles', '2', 'conservacio:estat', 'molt bo'
+put 'vehicles', '2', 'propietari:nif', '87654321B'
+put 'vehicles', '2', 'propietari:nom', 'Ana García'
+put 'vehicles', '2', 'propietari:telefon', ''
+put 'vehicles', '2', 'propietari:mail', 'ana.garcia@email.com'
+put 'vehicles', '2', 'ubicacio:ciutat', 'Palma'
+put 'vehicles', '2', 'ubicacio:illa', 'Mallorca'
+
+put 'vehicles', '3', 'info_general:marca', 'Honda'
+put 'vehicles', '3', 'info_general:model', 'Civic'
+put 'vehicles', '3', 'info_general:matricula', '9012GHI'
+put 'vehicles', '3', 'info_general:preu', '18000'
+put 'vehicles', '3', 'conservacio:any', '2020'
+put 'vehicles', '3', 'conservacio:km', '20000'
+put 'vehicles', '3', 'conservacio:estat', 'bo'
+put 'vehicles', '3', 'propietari:nif', '11223344C'
+put 'vehicles', '3', 'propietari:nom', 'David López'
+put 'vehicles', '3', 'propietari:telefon', '655123456'
+put 'vehicles', '3', 'ubicacio:ciutat', 'Eivissa'
+put 'vehicles', '3', 'ubicacio:illa', 'Eivissa'
+put 'vehicles', '3', 'ubicacio:longitud', '1.452850'
+put 'vehicles', '3', 'ubicacio:latitud', '38.916280'
+
+# test
+scan 'vehicles'
+
+# 3
+(bash)
+hdfs dfs -mkdir vehicles
+hdfs dfs -put vehicles.csv  vehicles/
+cat vehicles.csv # Just to test if needed
+hdfs dfs -ls /user/cloudera/vehicles # Just to test if needed
+hbase org.apache.hadoop.hbase.mapreduce.ImportTsv \
+-Dimporttsv.columns="HBASE_ROW_KEY,info_general:marca,info_general:model,info_general:matricula,info_general:preu,conservacio:any,conservacio:km,conservacio:estat,propietari:nif,propietari:nom,propietari:telefon,propietari:mail,ubicacio:ciutat,ubicacio:illa,ubicacio:longitud,ubicacio:latitud" \
+-Dimporttsv.separator=',' vehicles /user/cloudera/vehicles/vehicles.csv
+
+(hbase shell)
+scan 'vehicles'
+
+# 4
+get 'vehicles', '4'
+
+# 5
+scan 'vehicles', {COLUMNS => 'info_general'}
+
+# 6
+scan 'vehicles', {FILTER => "SingleColumnValueFilter('conservacio', 'estat', =, 'binary:bo')"}
+
+# 7
+scan 'vehicles', {FILTER => "RowFilter(=,'binary:1') OR RowFilter(=,'binary:2') OR RowFilter(=,'binary:4')", COLUMNS => ['propietari']}
+
+# 8
+scan 'vehicles', {FILTER => "RowFilter(=,'binary:3') OR RowFilter(=,'binary:4')", COLUMNS => ['info_general']}
+
+# 9
+put 'vehicles', '2', 'propietari:telefon', '656123321'
+get 'vehicles', '2' # Check
+
+# 10
+deleteall 'vehicles', '5'
+scan 'vehicles' # Check
+
+# 11
+(editor web)
+CREATE EXTERNAL TABLE hbase_vehicles (
+    key bigint,
+    info_general_marca string,
+    info_general_model string,
+    info_general_matricula string,
+    info_general_preu decimal(10,2),
+    conservacio_any int,
+    conservacio_km bigint,
+    conservacio_estat string,
+    propietari_nif string,
+    propietari_nom string,
+    propietari_telefon string,
+    propietari_mail string,
+    ubicacio_ciutat string,
+    ubicacio_illa string,
+    ubicacio_longitud decimal(10,7),
+    ubicacio_latitud decimal(10,7)
+)
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES (
+    'hbase.columns.mapping' = ':key,info_general:marca,info_general:model,info_general:
+        matricula,info_general:preu,conservacio:any,conservacio:km,conservacio:estat,
+        propietari:nif,propietari:nom,propietari:telefon,propietari:mail,ubicacio:ciutat
+        ,ubicacio:illa,ubicacio:longitud,ubicacio:latitud'
+)
+TBLPROPERTIES(
+    'hbase.table.name' = 'vehicles'
+);
+
+# 12
+(hive editor)
+SELECT info_general_marca,info_general_model,
+        info_general_matricula,info_general_preu
+FROM hbase_vehicles 
+WHERE ubicacio_ciutat = "Palma";
+
+# 13
+(impala editor)
+INVALIDATE METADATA;
+SELECT * 
+FROM hbase_vehicles 
+ORDER BY info_general_preu DESC 
+LIMIT 3;
+
+# 14
+(hive editor)
+SELECT conservacio_estat, avg(conservacio_km) AS avg_km
+FROM hbase_vehicles 
+GROUP BY conservacio_estat 
+ORDER BY avg_km DESC;
+
+# 15
+(impala editor)
+INVALIDATE METADATA;
+SELECT COUNT(*) AS coches, ubicacio_illa
+FROM hbase_vehicles
+GROUP BY ubicacio_illa;
