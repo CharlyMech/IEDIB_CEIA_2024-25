@@ -28,6 +28,7 @@ CREATE TABLE centres.centre (
     web STRING
 ) STORED AS PARQUET;
 
+-- NOTE: This insertion is meant for the centres_educatius2.json
 INSERT INTO TABLE centre
 SELECT
     get_json_object(centre,'$.adreca') AS adreca,
@@ -51,6 +52,9 @@ FROM ext_centres;
 
 SELECT *  FROM centre; -- Test
 
+-- From now on, Impala editor
+INVALIDATE METADATA centres.centre;
+
 -- 1
 SELECT COUNT(*)
 FROM centre
@@ -73,3 +77,41 @@ SELECT nom
 FROM centres.centre t, t.nomEtapa etapa
 WHERE nomIlla = 'Mallorca'
   AND etapa.item = 'Grau superior';
+
+
+
+-- MODIFICATIONS 09/01/2025
+-- Modifications required to use the centres_educatius.json file instead of centres_educatius2.json
+-- NOTICE that there should be just 1 file inside the HDFS directory, so delete the first one if needed
+
+INSERT INTO TABLE centres.centre
+SELECT
+    get_json_object(centre,'$.adreca') AS adreca,
+    get_json_object(centre,'$.cif') AS cif,
+    get_json_object(centre,'$.codiIlla') AS codiIlla,
+    get_json_object(centre,'$.codiMunicipi') AS codiMunicipi,
+    get_json_object(centre,'$.codiMunicipi') AS codiMunicipi,
+    get_json_object(centre,'$.cp') AS cp,
+    CAST(get_json_object(centre, '$.esPublic') AS BOOLEAN) AS esPublic,
+    CAST(get_json_object(centre, '$.latitud') AS DOUBLE) AS latitud,
+    CAST(get_json_object(centre, '$.longituf') AS DOUBLE) AS longitud,
+    get_json_object(centre,'$.mail') AS mail,
+    get_json_object(centre,'$.nom') AS nom,
+    SPLIT(get_json_object(centre, '$.nomEtapa'), ', ') AS nomEtapa,
+    get_json_object(centre,'$.nomIlla') AS nomIlla,
+    get_json_object(centre,'$.nomMunicipi') AS nomMunicipi,
+    get_json_object(centre,'$.telf1') AS telf1,
+    get_json_object(centre,'$.tipusCentreNomCa') AS tipusCentreNomCa,
+    get_json_object(centre,'$.web') AS web
+FROM (
+    -- Provided in subject's forum
+    SELECT explode(
+    split(
+      regexp_replace(get_json_object(centre, '$.data'), '^\\[|\\]$', ''),
+      '(?<=\\}),(?=\\{)' 
+    )
+  ) AS centre
+  FROM ext_centres
+) centres_exploded;
+
+-- The rest of the sentences are the same since the data would be the same exact one
