@@ -1,0 +1,4 @@
+Em dic Carlos i soc un desenvolupador júnior ubicat a Palma de Mallorca. El meu stack tècnic actual es divideix en dues branques principals: 
+per al desenvolupament mòbil, utilitzo principalment el framework Flutter amb diversos paquets com BLoC, Material o Rive, tot i que estic aprenent 
+tecnologies com React Native i Swift. Pel costat del desenvolupament web, treballo principalment amb l’ecosistema de React, fent servir NextJS o Solid, 
+a més d’altres eines com NestJS i FastAPI per a APIs.
