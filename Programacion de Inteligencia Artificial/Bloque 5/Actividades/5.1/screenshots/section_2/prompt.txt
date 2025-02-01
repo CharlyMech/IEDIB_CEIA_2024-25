@@ -1,0 +1,3 @@
+@workspace This project currently has a lack of features like uploading images from your local machine or from a URL. It also looks horrible even though this project has tailwind css, unacceptable!!!
+
+I need you please to add these two features to this project (just the TeachableMachine component) and also provide me new styles with tailwind css so the app looks very minimal (content centered in the screen, rounded borders, maybe an accent color, etc). You just need to edit this current file!
