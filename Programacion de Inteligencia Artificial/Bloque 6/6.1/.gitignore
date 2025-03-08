@@ -1,0 +1,7 @@
+# Just ignore the annotations and images folders due to their size
+annotations/
+annotations.tar.gz
+images/
+images.tar.gz
+# Ignore kera files
+*.keras
