@@ -1,0 +1,55 @@
+{
+	"schema": {
+		"type": "struct",
+		"fields": [
+			{
+				"type": "string",
+				"optional": false,
+				"field": "uri"
+			},
+			{
+				"type": "string",
+				"optional": false,
+				"field": "cid"
+			},
+			{
+				"type": "string",
+				"optional": false,
+				"field": "text"
+			},
+			{
+				"type": "int64",
+				"optional": true,
+				"name": "org.apache.kafka.connect.data.Timestamp",
+				"version": 1,
+				"field": "createdAt"
+			},
+			{
+				"type": "string",
+				"optional": false,
+				"field": "handle"
+			},
+			{
+				"type": "string",
+				"optional": true,
+				"field": "displayName"
+			},
+			{
+				"type": "string",
+				"optional": true,
+				"field": "avatar"
+			}
+		],
+		"optional": false,
+		"name": "status"
+	},
+	"payload": {
+		"uri": "at://did:plc:7l4zfvr2sfcq7xsvz7326u6t/app.bsky.feed.post/3lkqvsgt3yc2p",
+		"cid": "bafyreiey43frrexvuecfykkbrwzaix2u54glyxc2nptj647v3lmpejevjq",
+		"text": "I love everything about ArtificialIntelligence #ai",
+		"createdAt": 1742412142382,
+		"handle": "charlymech.bsky.social",
+		"displayName": null,
+		"avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:7l4zfvr2sfcq7xsvz7326u6t/bafkreib4ju7usk5xsa7vcy2qayub4vxhxcoss64u3kpqzngn5nr2isxkzq@jpeg"
+	}
+}

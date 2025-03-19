@@ -1,0 +1,83 @@
+{
+	"schema": {
+		"type": "struct",
+		"fields": [
+			{
+				"type": "struct",
+				"fields": [
+					{
+						"type": "string",
+						"optional": false,
+						"field": "uri"
+					},
+					{
+						"type": "string",
+						"optional": false,
+						"field": "cid"
+					}
+				],
+				"optional": false,
+				"field": "id"
+			},
+			{
+				"type": "string",
+				"optional": false,
+				"field": "text"
+			},
+			{
+				"type": "array",
+				"items": {
+					"type": "string",
+					"optional": false
+				},
+				"optional": false,
+				"field": "langs"
+			},
+			{
+				"type": "int64",
+				"optional": true,
+				"name": "org.apache.kafka.connect.data.Timestamp",
+				"version": 1,
+				"field": "createdAt"
+			},
+			{
+				"type": "struct",
+				"fields": [
+					{
+						"type": "string",
+						"optional": false,
+						"field": "handle"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"field": "displayName"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"field": "avatar"
+					}
+				],
+				"optional": false,
+				"field": "author"
+			}
+		],
+		"optional": false,
+		"name": "status"
+	},
+	"payload": {
+		"id": {
+			"uri": "at://did:plc:pcpvhedjrmiu2x6hwe33qpvm/app.bsky.feed.post/3lkpximen352k",
+			"cid": "bafyreiaeels63vn46zx76fipkhhgtkubcl6csm6q7ok3kiws2muqckldgi"
+		},
+		"text": "55% of people are uncomfortable with AI created content by @Timothy_Hughes buff.ly/7eH7Eq3 @DLAIgnite #SocialSelling #DigitalSelling #Marketing #MarketingSuccess #MarketingStrategy #MarketingTips #Marketing101 #ContentMarketing #ArtificialIntelligence",
+		"langs": [],
+		"createdAt": 1742379600304,
+		"author": {
+			"handle": "timothyhughes.bsky.social",
+			"displayName": "Timothy Hughes",
+			"avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:pcpvhedjrmiu2x6hwe33qpvm/bafkreif5zzb5n2osxyeklu3xg63ly3yiez4vh33c7a66sjywr7xyjgwarq@jpeg"
+		}
+	}
+}
