@@ -1,0 +1,3 @@
+# Ignore downloaded files:
+aclImdb_v1.tar.gz
+aclImdb/
