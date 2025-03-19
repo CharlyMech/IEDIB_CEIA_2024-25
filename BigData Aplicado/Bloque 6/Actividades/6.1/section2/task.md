@@ -50,4 +50,35 @@ Se vuelve a lanzar el worker, hacer POST del _source_ y lanzar el consumidor de 
 
 ![Nueva consumición del tópico con los datos formateados](./screenshots/4%20consumed%20and%20transformed.png)
 
-Una vez comprobado que funciona correctamente, podemos configurar el _sink_ para MySQL.
+Una vez comprobado que funciona correctamente, podemos configurar el _sink_ para MySQL además de la base de datos que almacenará los datos consumidos.
+
+```SQL
+CREATE DATABASE task6;
+USE task6;
+
+CREATE TABLE bluesky (
+	uri VARCHAR(255) NOT NULL,
+    cid VARCHAR(255) NOT NULL,
+    text TEXT NOT NULL,
+    createdAt DATETIME NOT NULL,
+    handle VARCHAR(255) NOT NULL,
+    displayName VARCHAR(255) DEFAULT NULL,
+    avatar VARCHAR(500) DEFAULT NULL
+);
+```
+
+![Archivo sink para MySQL](./screenshots/5%20sink%20mysql.png)
+
+Tras crear el archivo _sink_ para MySQL, hacemos el POST
+
+```bash
+# POST del SINK
+curl -X POST -H "Content-Type: application/json" --data @config/mysql-sink.json http://localhost:8083/connectors
+
+# Lanzar el consumidor del tópico
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic bluesky_ai --from-beginning
+```
+
+Por último, creamos un nuevo post en Bluesky con las palabras clave y esperamos a ver si se consume en la terminal y si se inserta en la base de datos.
+
+![Nuevo post en Bluesky](./screenshots/6%20another%20post.png)
