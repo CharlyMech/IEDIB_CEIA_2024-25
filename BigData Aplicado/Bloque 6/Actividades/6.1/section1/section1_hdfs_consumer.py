@@ -37,7 +37,3 @@ for message in consumer:
 
 	with hdfs_client.write(HDFS_FILE, append=True) as writer:
 		writer.write(csv_line)
-
-""" 
-	!! THIS CODE HAS NOT BEEN FULLY TESTED
-"""

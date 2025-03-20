@@ -32,18 +32,6 @@ echo "23/02/2025,16:07:30,17.7,75.1,1012" >> archivo.csv
 
 ---
 
-<h3 style="color: black; background-color: red">NOTA</h3>
-
-Durante la tutoría de día 18/03/2025 hemos podido comprobar que efectivamente con los pasos que voy a describir a continuación, la funcionalidad se realiza exitosamente. En algunos de los logs del mismo día se podrá ver.
-
-He probado mediante la creación de nuevos tópicos, reiniciando servicios y máquinas virtuales pero nada ha funcionado.
-
-Todo lo que es la parte de configuración y preparación del ejercicio podré proporcionar capturas de pantalla y datos verificados, pero habrá un punto en el que no podrá ser el caso ya que no he conseguido hacerlo funcionar correctamente. Principalmente me preocupa el script de Python (leer los comentarios explicativos dentro del código).
-
-Cabe la posibilidad que haya algo que no estoy ejecutando correctamente y por eso falle. Quedo a la espera de corrección.
-
----
-
 El primer paso que tenemos que realizar antes de empezar a crear los nuevos tópicos, consumidores y productores, es lanzar tanto ZooKeeper como el propio servicio de Kafka. Para ello ejecutamos los siguientes comandos en dos terminales diferentes:
 
 ```bash
@@ -68,7 +56,7 @@ En mi caso lo llamo `section_1`. Para comprobar que se ha creado correctamente s
 bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
 ```
 
-![Listado de tópicos](screenshots/0%20new%20topic.png)
+![Listado de tópicos](./screenshots/0%20new%20topic.png)
 
 El siguiente paso sería configurar el conector, en este caso el de tipo _source_ para consumir los datos desde un archivo. Como vamos a usar el modo distribuido, usaremos el archivo JSON.
 
@@ -76,7 +64,7 @@ El siguiente paso sería configurar el conector, en este caso el de tipo _source
 nano config/connect-file-source.json
 ```
 
-![Connector source para archivos JSON](screenshots/1%20connect%20file%20source.png)
+![Connector source para archivos JSON](./screenshots/1%20connect%20file%20source.png)
 
 Tras este paso se puede lanzar el worker (que actuará como una API REST) mediante el comando:
 
@@ -95,7 +83,7 @@ curl -X POST -H "Content-Type: application/json" --data @config/connect-file-sou
 curl http://localhost:8083/connectors
 ```
 
-![Connector source para archivos JSON](screenshots/2%20post%20connector.png)
+![Connector source para archivos JSON](./screenshots/2%20post%20connector.png)
 
 A este punto se podría decir que la parte de configuración está finalizada, por lo que es momento de crear el script consumidor del tópico en Python: [script consumidor](./section1_hdfs_consumer.py).
 
@@ -121,6 +109,10 @@ echo "23/02/2025,16:07:30,17.7,75.1,1012" >> section1.csv
 
 Desde la terminal donde se ha ejecutado el consumidor en Python se podrán ver (en caso de usar `print` en el código) los datos que se consumen.
 
+![Ejecutar el comando echo y comprobar ](./screenshots/3%20echo%20and%20consumer%20terminal.png)
+
+![Consumidor del tópico en python](./screenshots/4%20python%20consumer.png)
+
 Para comprobar el resultado, desde la máquina de hadoopmaster se puede ejecutar el siguiente comando para ver el contenido del archivo (sustituir `path/to/hdfs/file.csv` por el directorio completo, ejemplo debajo).
 
 ```bash
@@ -129,3 +121,7 @@ hdfs dfs -cat path/to/hdfs/file.csv
 # En mi caso:
 hdfs dfs -cat /user/hadoop/kafka/section1.csv
 ```
+
+![Consumidor del tópico en python](./screenshots/5%20hdfs.png)
+
+Como se puede apreciar en la imagen se insertan correctamente los eventos generados desde la otra máquina, dónde se encuentra el servicio de Kafka.
