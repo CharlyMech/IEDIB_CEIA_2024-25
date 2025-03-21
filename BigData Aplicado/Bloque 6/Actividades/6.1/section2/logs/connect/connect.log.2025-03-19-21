@@ -1,0 +1,515 @@
+[2025-03-19 21:00:40,772] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T19:37:27.339Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:00:41,376] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:00:04.766Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:00:45,027] INFO [bluesky-AI|task-0|offsets] WorkerSourceTask{id=bluesky-AI-0} Committing offsets for 1 acknowledged messages (org.apache.kafka.connect.runtime.WorkerSourceTask:235)
+[2025-03-19 21:01:40,772] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:00:04.766Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:02:40,773] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:00:04.766Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:03:40,774] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:00:04.766Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:04:23,221] INFO [AdminClient clientId=connect-cluster-shared-admin] Node 0 disconnected. (org.apache.kafka.clients.NetworkClient:1017)
+[2025-03-19 21:04:40,774] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:00:04.766Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:04:41,378] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:04:02.787Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:04:45,038] INFO [bluesky-AI|task-0|offsets] WorkerSourceTask{id=bluesky-AI-0} Committing offsets for 1 acknowledged messages (org.apache.kafka.connect.runtime.WorkerSourceTask:235)
+[2025-03-19 21:05:40,775] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:04:02.787Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:06:40,777] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:04:02.787Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:06:41,444] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:05:43.408Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:06:45,043] INFO [bluesky-AI|task-0|offsets] WorkerSourceTask{id=bluesky-AI-0} Committing offsets for 1 acknowledged messages (org.apache.kafka.connect.runtime.WorkerSourceTask:235)
+[2025-03-19 21:07:40,775] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:05:43.408Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:07:40,999] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:07:03.620Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:07:45,047] INFO [bluesky-AI|task-0|offsets] WorkerSourceTask{id=bluesky-AI-0} Committing offsets for 1 acknowledged messages (org.apache.kafka.connect.runtime.WorkerSourceTask:235)
+[2025-03-19 21:08:40,775] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:07:03.620Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:09:23,348] INFO [AdminClient clientId=connect-cluster-shared-admin] Node 0 disconnected. (org.apache.kafka.clients.NetworkClient:1017)
+[2025-03-19 21:09:40,775] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:07:03.620Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:09:41,135] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:08:47.093Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:09:45,052] INFO [bluesky-AI|task-0|offsets] WorkerSourceTask{id=bluesky-AI-0} Committing offsets for 2 acknowledged messages (org.apache.kafka.connect.runtime.WorkerSourceTask:235)
+[2025-03-19 21:10:40,775] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:08:47.093Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:11:20,975] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Session key updated (org.apache.kafka.connect.runtime.distributed.DistributedHerder:2483)
+[2025-03-19 21:11:40,775] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:08:47.093Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:12:40,776] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:08:47.093Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:13:40,776] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:08:47.093Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:14:40,776] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:08:47.093Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:14:41,388] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:13:23+00:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:14:45,065] INFO [bluesky-AI|task-0|offsets] WorkerSourceTask{id=bluesky-AI-0} Committing offsets for 1 acknowledged messages (org.apache.kafka.connect.runtime.WorkerSourceTask:235)
+[2025-03-19 21:15:40,776] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:13:23+00:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:15:41,141] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:15:02.138Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:15:45,069] INFO [bluesky-AI|task-0|offsets] WorkerSourceTask{id=bluesky-AI-0} Committing offsets for 1 acknowledged messages (org.apache.kafka.connect.runtime.WorkerSourceTask:235)
+[2025-03-19 21:16:40,776] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:15:02.138Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:17:40,776] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:15:02.138Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:18:40,776] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:15:02.138Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:19:23,634] INFO [AdminClient clientId=connect-cluster-shared-admin] Node 0 disconnected. (org.apache.kafka.clients.NetworkClient:1017)
+[2025-03-19 21:19:40,776] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:15:02.138Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:20:40,776] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:15:02.138Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:21:40,777] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:15:02.138Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:21:41,148] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:21:10.666Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:21:45,081] INFO [bluesky-AI|task-0|offsets] WorkerSourceTask{id=bluesky-AI-0} Committing offsets for 1 acknowledged messages (org.apache.kafka.connect.runtime.WorkerSourceTask:235)
+[2025-03-19 21:22:40,777] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:21:10.666Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:23:40,778] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:21:10.666Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:24:23,810] INFO [AdminClient clientId=connect-cluster-shared-admin] Node 0 disconnected. (org.apache.kafka.clients.NetworkClient:1017)
+[2025-03-19 21:24:40,778] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:21:10.666Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:25:40,778] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:21:10.666Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:26:40,778] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:21:10.666Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:27:35,360] INFO [0:0:0:0:0:0:0:1] - - [19/Mar/2025:20:27:35 +0000] "GET /connectors HTTP/1.1" 200 14 "-" "curl/8.5.0" 3 (org.apache.kafka.connect.runtime.rest.RestServer:62)
+[2025-03-19 21:27:40,778] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:21:10.666Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:28:22,672] INFO AbstractConfig values: 
+ (org.apache.kafka.common.config.AbstractConfig:372)
+[2025-03-19 21:28:22,680] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Connector mysql-sink-bluesky config updated (org.apache.kafka.connect.runtime.distributed.DistributedHerder:2425)
+[2025-03-19 21:28:22,680] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Rebalance started (org.apache.kafka.connect.runtime.distributed.WorkerCoordinator:242)
+[2025-03-19 21:28:22,680] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] (Re-)joining group (org.apache.kafka.connect.runtime.distributed.WorkerCoordinator:604)
+[2025-03-19 21:28:22,681] INFO [0:0:0:0:0:0:0:1] - - [19/Mar/2025:20:28:22 +0000] "POST /connectors HTTP/1.1" 201 613 "-" "curl/8.5.0" 33 (org.apache.kafka.connect.runtime.rest.RestServer:62)
+[2025-03-19 21:28:22,685] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Successfully joined group with generation Generation{generationId=14, memberId='connect-127.0.1.1:8083-583987df-efc5-4e09-ae38-b52425476056', protocol='sessioned'} (org.apache.kafka.connect.runtime.distributed.WorkerCoordinator:665)
+[2025-03-19 21:28:22,691] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Successfully synced group in generation Generation{generationId=14, memberId='connect-127.0.1.1:8083-583987df-efc5-4e09-ae38-b52425476056', protocol='sessioned'} (org.apache.kafka.connect.runtime.distributed.WorkerCoordinator:842)
+[2025-03-19 21:28:22,691] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Joined group at generation 14 with protocol version 2 and got assignment: Assignment{error=0, leader='connect-127.0.1.1:8083-583987df-efc5-4e09-ae38-b52425476056', leaderUrl='http://127.0.1.1:8083/', offset=17, connectorIds=[mysql-sink-bluesky, bluesky-AI], taskIds=[bluesky-AI-0], revokedConnectorIds=[], revokedTaskIds=[], delay=0} with rebalance delay: 0 (org.apache.kafka.connect.runtime.distributed.DistributedHerder:2621)
+[2025-03-19 21:28:22,692] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Starting connectors and tasks using config offset 17 (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1959)
+[2025-03-19 21:28:22,692] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Starting connector mysql-sink-bluesky (org.apache.kafka.connect.runtime.distributed.DistributedHerder:2077)
+[2025-03-19 21:28:22,693] INFO [mysql-sink-bluesky|worker] Creating connector mysql-sink-bluesky of type io.confluent.connect.jdbc.JdbcSinkConnector (org.apache.kafka.connect.runtime.Worker:312)
+[2025-03-19 21:28:22,693] INFO [mysql-sink-bluesky|worker] SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = mysql-sink-bluesky
+	predicates = []
+	tasks.max = 1
+	tasks.max.enforce = true
+	topics = [bluesky_ai]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:372)
+[2025-03-19 21:28:22,695] INFO [mysql-sink-bluesky|worker] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = mysql-sink-bluesky
+	predicates = []
+	tasks.max = 1
+	tasks.max.enforce = true
+	topics = [bluesky_ai]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:372)
+[2025-03-19 21:28:22,696] INFO [mysql-sink-bluesky|worker] Instantiated connector mysql-sink-bluesky with version 10.8.1 of type class io.confluent.connect.jdbc.JdbcSinkConnector (org.apache.kafka.connect.runtime.Worker:334)
+[2025-03-19 21:28:22,696] INFO [mysql-sink-bluesky|worker] Finished creating connector mysql-sink-bluesky (org.apache.kafka.connect.runtime.Worker:355)
+[2025-03-19 21:28:22,697] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Finished starting connectors and tasks (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1988)
+[2025-03-19 21:28:22,700] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = mysql-sink-bluesky
+	predicates = []
+	tasks.max = 1
+	tasks.max.enforce = true
+	topics = [bluesky_ai]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:372)
+[2025-03-19 21:28:22,701] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = mysql-sink-bluesky
+	predicates = []
+	tasks.max = 1
+	tasks.max.enforce = true
+	topics = [bluesky_ai]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:372)
+[2025-03-19 21:28:22,702] INFO [mysql-sink-bluesky|worker] Setting task configurations for 1 workers. (io.confluent.connect.jdbc.JdbcSinkConnector:51)
+[2025-03-19 21:28:22,723] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Tasks [mysql-sink-bluesky-0] configs updated (org.apache.kafka.connect.runtime.distributed.DistributedHerder:2440)
+[2025-03-19 21:28:22,724] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Rebalance started (org.apache.kafka.connect.runtime.distributed.WorkerCoordinator:242)
+[2025-03-19 21:28:22,724] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] (Re-)joining group (org.apache.kafka.connect.runtime.distributed.WorkerCoordinator:604)
+[2025-03-19 21:28:22,726] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Successfully joined group with generation Generation{generationId=15, memberId='connect-127.0.1.1:8083-583987df-efc5-4e09-ae38-b52425476056', protocol='sessioned'} (org.apache.kafka.connect.runtime.distributed.WorkerCoordinator:665)
+[2025-03-19 21:28:22,728] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Successfully synced group in generation Generation{generationId=15, memberId='connect-127.0.1.1:8083-583987df-efc5-4e09-ae38-b52425476056', protocol='sessioned'} (org.apache.kafka.connect.runtime.distributed.WorkerCoordinator:842)
+[2025-03-19 21:28:22,729] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Joined group at generation 15 with protocol version 2 and got assignment: Assignment{error=0, leader='connect-127.0.1.1:8083-583987df-efc5-4e09-ae38-b52425476056', leaderUrl='http://127.0.1.1:8083/', offset=19, connectorIds=[mysql-sink-bluesky, bluesky-AI], taskIds=[mysql-sink-bluesky-0, bluesky-AI-0], revokedConnectorIds=[], revokedTaskIds=[], delay=0} with rebalance delay: 0 (org.apache.kafka.connect.runtime.distributed.DistributedHerder:2621)
+[2025-03-19 21:28:22,729] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Starting connectors and tasks using config offset 19 (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1959)
+[2025-03-19 21:28:22,730] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Starting task mysql-sink-bluesky-0 (org.apache.kafka.connect.runtime.distributed.DistributedHerder:2002)
+[2025-03-19 21:28:22,735] INFO [mysql-sink-bluesky|task-0] Creating task mysql-sink-bluesky-0 (org.apache.kafka.connect.runtime.Worker:645)
+[2025-03-19 21:28:22,735] INFO [mysql-sink-bluesky|task-0] ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = mysql-sink-bluesky
+	predicates = []
+	tasks.max = 1
+	tasks.max.enforce = true
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig:372)
+[2025-03-19 21:28:22,736] INFO [mysql-sink-bluesky|task-0] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = mysql-sink-bluesky
+	predicates = []
+	tasks.max = 1
+	tasks.max.enforce = true
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:372)
+[2025-03-19 21:28:22,736] INFO [mysql-sink-bluesky|task-0] TaskConfig values: 
+	task.class = class io.confluent.connect.jdbc.sink.JdbcSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:372)
+[2025-03-19 21:28:22,737] INFO [mysql-sink-bluesky|task-0] Instantiated task mysql-sink-bluesky-0 with version 10.8.1 of type io.confluent.connect.jdbc.sink.JdbcSinkTask (org.apache.kafka.connect.runtime.Worker:664)
+[2025-03-19 21:28:22,737] INFO [mysql-sink-bluesky|task-0] StringConverterConfig values: 
+	converter.encoding = UTF-8
+	converter.type = key
+ (org.apache.kafka.connect.storage.StringConverterConfig:372)
+[2025-03-19 21:28:22,737] INFO [mysql-sink-bluesky|task-0] JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	replace.null.with.default = true
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:372)
+[2025-03-19 21:28:22,737] INFO [mysql-sink-bluesky|task-0] Set up the key converter class org.apache.kafka.connect.storage.StringConverter for task mysql-sink-bluesky-0 using the connector config (org.apache.kafka.connect.runtime.Worker:679)
+[2025-03-19 21:28:22,737] INFO [mysql-sink-bluesky|task-0] Set up the value converter class org.apache.kafka.connect.json.JsonConverter for task mysql-sink-bluesky-0 using the connector config (org.apache.kafka.connect.runtime.Worker:685)
+[2025-03-19 21:28:22,737] INFO [mysql-sink-bluesky|task-0] Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task mysql-sink-bluesky-0 using the worker config (org.apache.kafka.connect.runtime.Worker:690)
+[2025-03-19 21:28:22,738] INFO [mysql-sink-bluesky|task-0] Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:1794)
+[2025-03-19 21:28:22,738] INFO [mysql-sink-bluesky|task-0] SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = mysql-sink-bluesky
+	predicates = []
+	tasks.max = 1
+	tasks.max.enforce = true
+	topics = [bluesky_ai]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:372)
+[2025-03-19 21:28:22,739] INFO [mysql-sink-bluesky|task-0] EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = class org.apache.kafka.connect.storage.StringConverter
+	name = mysql-sink-bluesky
+	predicates = []
+	tasks.max = 1
+	tasks.max.enforce = true
+	topics = [bluesky_ai]
+	topics.regex = 
+	transforms = []
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:372)
+[2025-03-19 21:28:22,740] INFO [mysql-sink-bluesky|task-0] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-mysql-sink-bluesky-0
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-mysql-sink-bluesky
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:372)
+[2025-03-19 21:28:22,742] INFO [mysql-sink-bluesky|task-0] initializing Kafka metrics collector (org.apache.kafka.common.telemetry.internals.KafkaMetricsCollector:269)
+[2025-03-19 21:28:22,745] INFO [mysql-sink-bluesky|task-0] These configurations '[metrics.context.connect.kafka.cluster.id, metrics.context.connect.group.id]' were supplied but are not used yet. (org.apache.kafka.clients.consumer.ConsumerConfig:381)
+[2025-03-19 21:28:22,746] INFO [mysql-sink-bluesky|task-0] Kafka version: 3.8.1 (org.apache.kafka.common.utils.AppInfoParser:124)
+[2025-03-19 21:28:22,746] INFO [mysql-sink-bluesky|task-0] Kafka commitId: 70d6ff42debf7e17 (org.apache.kafka.common.utils.AppInfoParser:125)
+[2025-03-19 21:28:22,746] INFO [mysql-sink-bluesky|task-0] Kafka startTimeMs: 1742416102746 (org.apache.kafka.common.utils.AppInfoParser:126)
+[2025-03-19 21:28:22,751] INFO [Worker clientId=connect-127.0.1.1:8083, groupId=connect-cluster] Finished starting connectors and tasks (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1988)
+[2025-03-19 21:28:22,752] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Subscribed to topic(s): bluesky_ai (org.apache.kafka.clients.consumer.internals.LegacyKafkaConsumer:476)
+[2025-03-19 21:28:22,752] INFO [mysql-sink-bluesky|task-0] Starting JDBC Sink task (io.confluent.connect.jdbc.sink.JdbcSinkTask:51)
+[2025-03-19 21:28:22,753] INFO [mysql-sink-bluesky|task-0] JdbcSinkConfig values: 
+	auto.create = true
+	auto.evolve = true
+	batch.size = 3000
+	connection.attempts = 3
+	connection.backoff.ms = 10000
+	connection.password = [hidden]
+	connection.url = jdbc:mysql://localhost/task6
+	connection.user = root
+	date.timezone = DB_TIMEZONE
+	db.timezone = UTC
+	delete.enabled = false
+	dialect.name = 
+	fields.whitelist = []
+	insert.mode = insert
+	jdbc.credentials.provider.class = class io.confluent.connect.jdbc.util.DefaultJdbcCredentialsProvider
+	max.retries = 10
+	mssql.use.merge.holdlock = true
+	pk.fields = []
+	pk.mode = none
+	quote.sql.identifiers = ALWAYS
+	replace.null.with.default = true
+	retry.backoff.ms = 3000
+	table.name.format = bluesky
+	table.types = [TABLE]
+	trim.sensitive.log = false
+ (io.confluent.connect.jdbc.sink.JdbcSinkConfig:372)
+[2025-03-19 21:28:22,754] INFO [mysql-sink-bluesky|task-0] Initializing JDBC writer (io.confluent.connect.jdbc.sink.JdbcSinkTask:65)
+[2025-03-19 21:28:22,754] INFO [mysql-sink-bluesky|task-0] Validating JDBC URL. (io.confluent.connect.jdbc.dialect.DatabaseDialects:171)
+[2025-03-19 21:28:22,754] INFO [mysql-sink-bluesky|task-0] Validated JDBC URL. (io.confluent.connect.jdbc.dialect.DatabaseDialects:174)
+[2025-03-19 21:28:22,758] INFO [mysql-sink-bluesky|task-0] Validating JDBC URL. (io.confluent.connect.jdbc.dialect.DatabaseDialects:171)
+[2025-03-19 21:28:22,758] INFO [mysql-sink-bluesky|task-0] Validated JDBC URL. (io.confluent.connect.jdbc.dialect.DatabaseDialects:174)
+[2025-03-19 21:28:22,759] INFO [mysql-sink-bluesky|task-0] Initializing writer using SQL dialect: MySqlDatabaseDialect (io.confluent.connect.jdbc.sink.JdbcSinkTask:72)
+[2025-03-19 21:28:22,760] INFO [mysql-sink-bluesky|task-0] JDBC writer initialized (io.confluent.connect.jdbc.sink.JdbcSinkTask:74)
+[2025-03-19 21:28:22,760] INFO [mysql-sink-bluesky|task-0] WorkerSinkTask{id=mysql-sink-bluesky-0} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:324)
+[2025-03-19 21:28:22,761] INFO [mysql-sink-bluesky|task-0] WorkerSinkTask{id=mysql-sink-bluesky-0} Executing sink task (org.apache.kafka.connect.runtime.WorkerSinkTask:210)
+[2025-03-19 21:28:22,765] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Cluster ID: jVS0nPZPQGOqjEs5fW_ykA (org.apache.kafka.clients.Metadata:364)
+[2025-03-19 21:28:22,766] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Discovered group coordinator carlos-desktop:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:936)
+[2025-03-19 21:28:22,768] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] (Re-)joining group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:604)
+[2025-03-19 21:28:22,779] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Request joining group due to: need to re-join with the given member-id: connector-consumer-mysql-sink-bluesky-0-4565c5b6-9b5f-4ba0-a35a-5ae82f698c25 (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1102)
+[2025-03-19 21:28:22,779] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] (Re-)joining group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:604)
+[2025-03-19 21:28:22,783] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Successfully joined group with generation Generation{generationId=1, memberId='connector-consumer-mysql-sink-bluesky-0-4565c5b6-9b5f-4ba0-a35a-5ae82f698c25', protocol='range'} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:665)
+[2025-03-19 21:28:22,790] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Finished assignment for group at generation 1: {connector-consumer-mysql-sink-bluesky-0-4565c5b6-9b5f-4ba0-a35a-5ae82f698c25=Assignment(partitions=[bluesky_ai-0])} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:663)
+[2025-03-19 21:28:22,794] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Successfully synced group in generation Generation{generationId=1, memberId='connector-consumer-mysql-sink-bluesky-0-4565c5b6-9b5f-4ba0-a35a-5ae82f698c25', protocol='range'} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:842)
+[2025-03-19 21:28:22,795] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Notifying assignor about the new Assignment(partitions=[bluesky_ai-0]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:323)
+[2025-03-19 21:28:22,795] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Adding newly assigned partitions: bluesky_ai-0 (org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker:57)
+[2025-03-19 21:28:22,800] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Found no committed offset for partition bluesky_ai-0 (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1506)
+[2025-03-19 21:28:22,805] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Resetting offset for partition bluesky_ai-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[carlos-desktop:9092 (id: 0 rack: null)], epoch=0}}. (org.apache.kafka.clients.consumer.internals.SubscriptionState:398)
+[2025-03-19 21:28:23,046] INFO [mysql-sink-bluesky|task-0] JdbcDbWriter Connected (io.confluent.connect.jdbc.sink.JdbcDbWriter:57)
+[2025-03-19 21:28:23,048] INFO [mysql-sink-bluesky|task-0] Database connection established. (io.confluent.connect.jdbc.util.CachedConnectionProvider:64)
+[2025-03-19 21:28:23,079] ERROR [mysql-sink-bluesky|task-0] WorkerSinkTask{id=mysql-sink-bluesky-0} Task threw an uncaught and unrecoverable exception. Task is being killed and will not recover until manually restarted. Error: Sink connector 'mysql-sink-bluesky' is configured with 'delete.enabled=false' and 'pk.mode=none' and therefore requires records with a non-null Struct value and non-null Struct schema, but found record at (topic='bluesky_ai',partition=0,offset=0,timestamp=1742379600304) with a HashMap value and null value schema. (org.apache.kafka.connect.runtime.WorkerSinkTask:633)
+org.apache.kafka.connect.errors.ConnectException: Sink connector 'mysql-sink-bluesky' is configured with 'delete.enabled=false' and 'pk.mode=none' and therefore requires records with a non-null Struct value and non-null Struct schema, but found record at (topic='bluesky_ai',partition=0,offset=0,timestamp=1742379600304) with a HashMap value and null value schema.
+	at io.confluent.connect.jdbc.sink.RecordValidator.lambda$requiresValue$2(RecordValidator.java:86)
+	at io.confluent.connect.jdbc.sink.BufferedRecords.add(BufferedRecords.java:81)
+	at io.confluent.connect.jdbc.sink.JdbcDbWriter.write(JdbcDbWriter.java:77)
+	at io.confluent.connect.jdbc.sink.JdbcSinkTask.put(JdbcSinkTask.java:90)
+	at org.apache.kafka.connect.runtime.WorkerSinkTask.deliverMessages(WorkerSinkTask.java:605)
+	at org.apache.kafka.connect.runtime.WorkerSinkTask.poll(WorkerSinkTask.java:344)
+	at org.apache.kafka.connect.runtime.WorkerSinkTask.iteration(WorkerSinkTask.java:246)
+	at org.apache.kafka.connect.runtime.WorkerSinkTask.execute(WorkerSinkTask.java:215)
+	at org.apache.kafka.connect.runtime.WorkerTask.doRun(WorkerTask.java:225)
+	at org.apache.kafka.connect.runtime.WorkerTask.run(WorkerTask.java:280)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.lambda$withClassLoader$1(Plugins.java:237)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-03-19 21:28:23,082] ERROR [mysql-sink-bluesky|task-0] WorkerSinkTask{id=mysql-sink-bluesky-0} Task threw an uncaught and unrecoverable exception. Task is being killed and will not recover until manually restarted (org.apache.kafka.connect.runtime.WorkerTask:233)
+org.apache.kafka.connect.errors.ConnectException: Exiting WorkerSinkTask due to unrecoverable exception.
+	at org.apache.kafka.connect.runtime.WorkerSinkTask.deliverMessages(WorkerSinkTask.java:635)
+	at org.apache.kafka.connect.runtime.WorkerSinkTask.poll(WorkerSinkTask.java:344)
+	at org.apache.kafka.connect.runtime.WorkerSinkTask.iteration(WorkerSinkTask.java:246)
+	at org.apache.kafka.connect.runtime.WorkerSinkTask.execute(WorkerSinkTask.java:215)
+	at org.apache.kafka.connect.runtime.WorkerTask.doRun(WorkerTask.java:225)
+	at org.apache.kafka.connect.runtime.WorkerTask.run(WorkerTask.java:280)
+	at org.apache.kafka.connect.runtime.isolation.Plugins.lambda$withClassLoader$1(Plugins.java:237)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.kafka.connect.errors.ConnectException: Sink connector 'mysql-sink-bluesky' is configured with 'delete.enabled=false' and 'pk.mode=none' and therefore requires records with a non-null Struct value and non-null Struct schema, but found record at (topic='bluesky_ai',partition=0,offset=0,timestamp=1742379600304) with a HashMap value and null value schema.
+	at io.confluent.connect.jdbc.sink.RecordValidator.lambda$requiresValue$2(RecordValidator.java:86)
+	at io.confluent.connect.jdbc.sink.BufferedRecords.add(BufferedRecords.java:81)
+	at io.confluent.connect.jdbc.sink.JdbcDbWriter.write(JdbcDbWriter.java:77)
+	at io.confluent.connect.jdbc.sink.JdbcSinkTask.put(JdbcSinkTask.java:90)
+	at org.apache.kafka.connect.runtime.WorkerSinkTask.deliverMessages(WorkerSinkTask.java:605)
+	... 11 more
+[2025-03-19 21:28:23,082] INFO [mysql-sink-bluesky|task-0] Stopping task (io.confluent.connect.jdbc.sink.JdbcSinkTask:178)
+[2025-03-19 21:28:23,085] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Revoke previously assigned partitions bluesky_ai-0 (org.apache.kafka.clients.consumer.internals.ConsumerRebalanceListenerInvoker:79)
+[2025-03-19 21:28:23,086] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Member connector-consumer-mysql-sink-bluesky-0-4565c5b6-9b5f-4ba0-a35a-5ae82f698c25 sending LeaveGroup request to coordinator carlos-desktop:9092 (id: 2147483647 rack: null) due to the consumer is being closed (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1173)
+[2025-03-19 21:28:23,087] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Resetting generation and member id due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1055)
+[2025-03-19 21:28:23,087] INFO [mysql-sink-bluesky|task-0] [Consumer clientId=connector-consumer-mysql-sink-bluesky-0, groupId=connect-mysql-sink-bluesky] Request joining group due to: consumer pro-actively leaving the group (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:1102)
+[2025-03-19 21:28:23,323] INFO [mysql-sink-bluesky|task-0] Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:684)
+[2025-03-19 21:28:23,323] INFO [mysql-sink-bluesky|task-0] Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:688)
+[2025-03-19 21:28:23,323] INFO [mysql-sink-bluesky|task-0] Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter (org.apache.kafka.common.metrics.Metrics:688)
+[2025-03-19 21:28:23,324] INFO [mysql-sink-bluesky|task-0] Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:694)
+[2025-03-19 21:28:23,327] INFO [mysql-sink-bluesky|task-0] App info kafka.consumer for connector-consumer-mysql-sink-bluesky-0 unregistered (org.apache.kafka.common.utils.AppInfoParser:88)
+[2025-03-19 21:28:27,958] INFO [0:0:0:0:0:0:0:1] - - [19/Mar/2025:20:28:27 +0000] "GET /connectors HTTP/1.1" 200 35 "-" "curl/8.5.0" 2 (org.apache.kafka.connect.runtime.rest.RestServer:62)
+[2025-03-19 21:28:40,779] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:21:10.666Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:29:40,779] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:21:10.666Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:30:40,779] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:21:10.666Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:31:40,779] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:21:10.666Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:31:41,151] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:30:28.308Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:31:45,097] INFO [bluesky-AI|task-0|offsets] WorkerSourceTask{id=bluesky-AI-0} Committing offsets for 1 acknowledged messages (org.apache.kafka.connect.runtime.WorkerSourceTask:235)
+[2025-03-19 21:32:40,779] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:30:28.308Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:32:41,392] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:31:55.917Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:32:45,102] INFO [bluesky-AI|task-0|offsets] WorkerSourceTask{id=bluesky-AI-0} Committing offsets for 1 acknowledged messages (org.apache.kafka.connect.runtime.WorkerSourceTask:235)
+[2025-03-19 21:33:40,779] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:31:55.917Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:34:24,023] INFO [AdminClient clientId=connect-cluster-shared-admin] Node 0 disconnected. (org.apache.kafka.clients.NetworkClient:1017)
+[2025-03-19 21:34:40,779] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:31:55.917Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:35:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:31:55.917Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:36:40,779] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:31:55.917Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:36:41,417] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T21:35:52.257+01:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:36:45,112] INFO [bluesky-AI|task-0|offsets] WorkerSourceTask{id=bluesky-AI-0} Committing offsets for 1 acknowledged messages (org.apache.kafka.connect.runtime.WorkerSourceTask:235)
+[2025-03-19 21:37:40,779] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T21:35:52.257+01:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:38:40,779] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T21:35:52.257+01:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:39:24,205] INFO [AdminClient clientId=connect-cluster-shared-admin] Node 0 disconnected. (org.apache.kafka.clients.NetworkClient:1017)
+[2025-03-19 21:39:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T21:35:52.257+01:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:40:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T21:35:52.257+01:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:41:40,781] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T21:35:52.257+01:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:42:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T21:35:52.257+01:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:43:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T21:35:52.257+01:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:44:24,389] INFO [AdminClient clientId=connect-cluster-shared-admin] Node 0 disconnected. (org.apache.kafka.clients.NetworkClient:1017)
+[2025-03-19 21:44:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T21:35:52.257+01:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:45:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T21:35:52.257+01:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:46:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T21:35:52.257+01:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:47:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T21:35:52.257+01:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:48:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T21:35:52.257+01:00 (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:48:41,401] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:48:26.211Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:48:45,130] INFO [bluesky-AI|task-0|offsets] WorkerSourceTask{id=bluesky-AI-0} Committing offsets for 1 acknowledged messages (org.apache.kafka.connect.runtime.WorkerSourceTask:235)
+[2025-03-19 21:49:24,592] INFO [AdminClient clientId=connect-cluster-shared-admin] Node 0 disconnected. (org.apache.kafka.clients.NetworkClient:1017)
+[2025-03-19 21:49:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:48:26.211Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:49:41,141] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:49:11.150Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:49:45,135] INFO [bluesky-AI|task-0|offsets] WorkerSourceTask{id=bluesky-AI-0} Committing offsets for 2 acknowledged messages (org.apache.kafka.connect.runtime.WorkerSourceTask:235)
+[2025-03-19 21:50:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:49:11.150Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:51:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:49:11.150Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:52:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:49:11.150Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:53:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:49:11.150Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:54:24,794] INFO [AdminClient clientId=connect-cluster-shared-admin] Node 0 disconnected. (org.apache.kafka.clients.NetworkClient:1017)
+[2025-03-19 21:54:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:49:11.150Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:55:40,780] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:49:11.150Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:56:40,781] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:49:11.150Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:57:40,781] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:49:11.150Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:58:40,781] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:49:11.150Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)
+[2025-03-19 21:59:24,988] INFO [AdminClient clientId=connect-cluster-shared-admin] Node 0 disconnected. (org.apache.kafka.clients.NetworkClient:1017)
+[2025-03-19 21:59:40,781] INFO [bluesky-AI|task-0] Polling Bluesky for ArtificialIntelligence for posts using offset 2025-03-19T20:49:11.150Z (uk.co.dalelane.kafkaconnect.bluesky.api.BlueskyClient:208)

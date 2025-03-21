@@ -1,17 +1,13 @@
 {
-  "name": "bluesky-AI",
+  "name": "bluesky",
   "config": {
     "connector.class": "uk.co.dalelane.kafkaconnect.bluesky.source.BlueskySourceConnector",
-
     "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "value.converter": "org.apache.kafka.connect.json.JsonConverter",
-
     "bluesky.identity": "charlymech.bsky.social",
     "bluesky.password": "eupu-5yt5-vku7-6ouw",
-
     "bluesky.searchterm": "ArtificialIntelligence",
-    "bluesky.topic": "bluesky_ai",
-
+    "bluesky.topic": "ai",
     "transforms": "dropLangs,flatten,renameUri,renameCid,renameHandle,renameDisplayName,renameAvatar",
     "transforms.dropLangs.type": "org.apache.kafka.connect.transforms.ReplaceField$Value",
     "transforms.dropLangs.exclude": "langs",
@@ -26,7 +22,6 @@
     "transforms.renameDisplayName.renames": "author.displayName:displayName",
     "transforms.renameAvatar.type": "org.apache.kafka.connect.transforms.ReplaceField$Value",
     "transforms.renameAvatar.renames": "author.avatar:avatar",
-
     "tasks.max": 1
   }
 }

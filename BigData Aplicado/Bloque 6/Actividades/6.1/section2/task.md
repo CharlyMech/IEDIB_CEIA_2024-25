@@ -14,6 +14,10 @@
 
 ---
 
+Puede ser que algunos nombres de tópicos, tablas o conectores no sean los mismos ya que he realizado diversas pruebas
+
+---
+
 A este punto de la actividad, supondré que todo lo realizado durante los ejercicios y ejemplos de los apuntes ha sido realizado e iré directamente a la explicación de la configuración para esta actividad. Supondremos que todos los servicios necesarios (Zookeeper, el broker de Kafka y el worker) también han sido lanzados correctamente.
 
 El primer paso es configurar el archivo _source_ para Bluesky:
@@ -27,7 +31,7 @@ Después de haber creado el archivo de configuración correctamente con el nuevo
 curl -X POST -H "Content-Type: application/json" --data @config/bluesky-source.json http://localhost:8083/connectors
 
 # Terminal 2 (derecha)
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic bluesky_ai --from-beginning
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic ai --from-beginning
 ```
 
 ![Archivo de configuración source para Bluesky](./screenshots/1%20post%20source%20and%20check%20data.png)
@@ -56,12 +60,14 @@ Una vez comprobado que funciona correctamente, podemos configurar el _sink_ para
 CREATE DATABASE task6;
 USE task6;
 
-CREATE TABLE bluesky (
-	uri VARCHAR(255) NOT NULL,
-    cid VARCHAR(255) NOT NULL,
-    text TEXT NOT NULL,
-    createdAt DATETIME NOT NULL,
-    handle VARCHAR(255) NOT NULL,
+-- This is not executed since the sink is set up to create it automatically
+-- If required, this should be the data structure
+CREATE TABLE ai (
+	uri VARCHAR(255),
+    cid VARCHAR(255),
+    text VARCHAR(255),
+    createdAt DATETIME,
+    handle VARCHAR(255),
     displayName VARCHAR(255) DEFAULT NULL,
     avatar VARCHAR(500) DEFAULT NULL
 );
@@ -82,3 +88,11 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic bluesky_
 Por último, creamos un nuevo post en Bluesky con las palabras clave y esperamos a ver si se consume en la terminal y si se inserta en la base de datos.
 
 ![Nuevo post en Bluesky](./screenshots/6%20another%20post.png)
+
+### NOTA final
+
+Como se ha ido comentando en los emails intercambiados, no sabemos por qué no se insertan los eventos en la base de datos. El problema está en el [conector sink](./mysql-sink.json), los permisos de MySQL son correctos para el usuario y contraseña utilizados. El _source_ es correcto ya que consume los eventos y les da el formato correcto. los archivos _source_ y _sink_ en este directorio son los más actualizados, principalmente el _sink_ está configurado para que cree la tabla automáticamente, no como el que se muestra en las capturas de este documento.
+
+Hablando con un compañero al que sí que le fincionó (Alfons), me pasó su configuración a la cual le cambié los nombre, pero tampoco surgió. Esto me lleva a pensar que hay algo que no va bien con el driver, aunque las pruebas de los ejercicios de aprendizaje los realicé con éxito.
+
+Queda pendiente de revisión y ver dónde se está generando el error que no permite que los eventos generados en Bluesky se consuman e inserten en la base de datos MySQL.
