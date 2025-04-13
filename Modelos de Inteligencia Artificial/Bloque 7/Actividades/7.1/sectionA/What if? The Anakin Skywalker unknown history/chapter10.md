@@ -1,0 +1,7 @@
+# Chapter 10: Darth Maul’s Shadow – The Crimson Dawn
+
+The crimson banners of Crimson Dawn fluttered in the windless void of Dathomir’s ancient temples. Qi’ra, now the syndicate’s enigmatic leader, knelt before a holocron pulsating with Maul’s recorded visage. “The galaxy believes me gone,” his spectral voice hissed. “But you will finish what I began.” Since Maul’s death, Qi’ra had rebuilt his empire in silence, exploiting the Republic’s fragile peace. Her agents infiltrated Senate corridors, bribing senators like Tai-Lin Garr to deregulate trade routes. Yet her true goal was darker: resurrecting the Sith’s dominance through Maul’s hidden apprentices—the “Nightbrothers” of Dathomir.
+
+Ahsoka Tano’s investigations into missing Force-sensitive children led her to Qi’ra’s doorstep. Disguised as a spice trader, she infiltrated a Crimson Dawn auction on Nar Shaddaa, where a young Nightsister, Zara, was being sold. The bidding erupted into chaos when clones-turned-mercenaries, led by a grizzled Wolffe, stormed the venue. Ahsoka freed Zara, but not before Qi’ra confronted her. “You Jedi are relics,” Qi’ra sneered, igniting a stolen lightsaber. Their duel ended abruptly when Zara unleashed a Nightsister ritual, collapsing the building.
+
+Meanwhile, Obi-Wan and Bo-Katan tracked Crimson Dawn to Ord Mantell, uncovering a stockpile of kyber-enhanced weapons. “Maul’s obsession lives on,” Bo-Katan muttered, detonating the facility. The explosion lit the sky, but Qi’ra escaped, transmitting a final threat to Coruscant: “The Dawn rises in darkness.”

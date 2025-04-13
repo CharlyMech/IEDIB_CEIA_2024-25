@@ -1,0 +1,9 @@
+# Chapter 2: Padmé Amidala – The Flame of Democracy
+
+Padmé Amidala’s hands trembled as she adjusted the japor snippet around her neck—a gift from Anakin, now a symbol of hope. The Senate Rotunda, once Palpatine’s stage, buzzed with nervous energy. Delegates from Corellia to Ryloth argued over the Reformation Accords, a sweeping overhaul of the Republic’s corrupt foundations. Padmé’s voice cut through the chaos, sharp as a vibroblade: “We will not rebuild on the bones of our ideals!”
+
+At home, her dual roles as senator and mother tested her resolve. Luke, curious and bold, once sneaked into her office during a holoconference with Chancellor Organa, while Leia dissected droid schematics instead of practicing diplomacy. Anakin, ever the warrior, struggled to adapt to domestic life. Their arguments over security details—(“The twins need normalcy, Ani!”)—echoed through the marble halls of Varykino. Yet in quiet moments, they found solace: Anakin teaching Luke to pilot a starhopper, Padmé recounting tales of Shmi Skywalker to Leia.
+
+But shadows loomed. A radical faction led by Senator Philo accused Padmé of “Jedi sympathies,” leaking holos of her private meetings with Obi-Wan. Worse, a Separatist resurgence on Mygeeto threatened to reignite the war. When Panaka, now Moff of Naboo, proposed martial law, Padmé confronted him in a fiery broadcast: “You wear democracy like a mask, but I remember the man who served a queen!” Her defiance united the Mid Rim systems, but cost her old allies.
+
+Her greatest trial came when a bounty hunter, Cad Bane, infiltrated their Naboo estate, intent on kidnapping the twins. Anakin, away negotiating with the Wookiees, raced home—but it was Padmé who outwitted Bane, using a smuggled electrostaff from her days as Queen. As the twins clung to her, she realized the galaxy’s peace would always demand sacrifice. That night, she drafted the Amidala Doctrine: “A mother’s love is the first line of defense.”

@@ -1,0 +1,9 @@
+# Chapter 3: Obi-Wan Kenobi – The Unbroken Circle
+
+Obi-Wan Kenobi meditated in the Room of a Thousand Fountains, the water’s song failing to soothe him. The Council had voted 5-4 to exile him. Not for failure, but for success. His refusal to kill Anakin on Mustafar—now seen as reckless—had split the Jedi. Yet when Yoda resigned in solidarity, the Order buckled. “A crossroads, we face,” the ancient Master had said. “Teach attachment, we must. Or fade, we will.”
+
+Rebuilding took unexpected forms. Ahsoka Tano, returned from Malachor, joined Obi-Wan in establishing a splinter temple on Lothal, where younglings learned to embrace familial bonds. Grogu, a foundling from the ruins of the Jedi Temple, became Obi-Wan’s star pupil. The child’s laughter during Force lessons was a balm to his weary soul. Yet memories of Satine haunted him. When Bo-Katan Kryze requested aid against Maul’s Mandalorian loyalists, Obi-Wan hesitated—until Anakin arrived unannounced, R2-D2 trailing behind. “You once told me ‘I’ll always have your back,’ Master. Time to prove it.”
+
+Their campaign on Mandalore was a ballet of chaos. Anakin’s 501st Legion, now repurposed as peacekeepers, clashed with Maul’s Night Owls. In the throne room, Obi-Wan faced Maul alone. The Sith’s taunts—“Kenobi! The galaxy has outgrown you!”—were silenced by a single thrust through the heart. Yet victory tasted bitter. Maul’s final words—“He will avenge us…”—lingered.
+
+Returning to Coruscant, Obi-Wan knelt before the Council, expecting censure. Instead, Plo Koon offered his lightsaber—a gesture of reconciliation. That night, Obi-Wan visited Dex’s Diner with Anakin, their laughter over jawa juice startling nearby patrons. Later, he penned a letter to Qui-Gon, sealing it with a Tatooine flower: “The Circle is unbroken. The student has become the teacher.”
