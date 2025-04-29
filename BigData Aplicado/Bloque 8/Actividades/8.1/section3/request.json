@@ -1,0 +1,54 @@
+{
+	"dataframe_split": {
+		"columns": [
+			"island",
+			"culmen_length_mm",
+			"culmen_depth_mm",
+			"flipper_length_mm",
+			"body_mass_g",
+			"sex"
+		],
+		"data": [
+			[
+				"Torgersen",
+				"39.1",
+				"18.7",
+				"181",
+				"3750",
+				"MALE"
+			],
+			[
+				"Torgersen",
+				"36.7",
+				"19.3",
+				"193",
+				"3450",
+				"FEMALE"
+			],
+			[
+				"Torgersen",
+				"38.9",
+				"17.8",
+				"181",
+				"3625",
+				"FEMALE"
+			],
+			[
+				"Torgersen",
+				"39.2",
+				"19.6",
+				"195",
+				"4675",
+				"MALE"
+			],
+			[
+				"Torgersen",
+				"37.8",
+				"17.3",
+				"180",
+				"3700",
+				"NA"
+			]
+		]
+	}
+}
